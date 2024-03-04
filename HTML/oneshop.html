@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>One Shop</title>
+     <link rel="stylesheet" href="/OneShop/CSS/o-oneshop.css">
+     <script src="https://kit.fontawesome.com/95749087e1.js" crossorigin="anonymous"></script>
+</head>
+<body class="overflow-x-hidden font-figtree">
+     <nav class="bg-[#ffffff] flex justify-around items-center flex-wrap p-5 sticky top-[0.1px] shadow-lg z-50">
+          <!-- Logo -->
+          <section class="w-40 text-center">
+               <h1 class="text-xl font-extrabold tracking-wider">
+                    <span class="text-[#324464]">O</span>NE <span class="text-[#324464]">S</span>HOP
+               </h1>
+               <h2 class="text-sm tracking-wider">
+                    shop all at one stop
+               </h2>
+          </section>
+          <!-- Search Bar -->
+          <section class="w-[50%] flex items-center relative">
+               <input type="search" placeholder="Serach Anything" class="w-[100%] p-2 border-2 rounded-lg outline-none placeholder:italic placeholder:text-slate-400">
+               <i class="fa-solid fa-magnifying-glass absolute right-3 p-3 bg-[#ffffff] text-[#484848]"></i>
+          </section>
+          <!-- Navigation Menu -->
+          <ul class="flex flex-wrap gap-5 justify-center">
+               <a href=""><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
+               <a href="offers.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Offers</li></a>
+               <a href="returns.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Returns & Orders</li></a>
+               <a href="profile.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Profile</li></a>
+          </ul>
+     </nav>
+
+     <!-- Banner Images -->
+     <section class="bg-[#ffffff]">
+          <section class="flex p-10 overflow-auto gap-5 flex-nowrap">
+               <div class="border p-10 rounded-md flex flex-col md:flex-row items-center justify-center shadow-xl gap-4 md:min-w-[60rem]">
+                    <img src="/Oneshop/Material/shirt.jpg" alt="" class="w-60">
+                    <h1 class="space-y-4">
+                         <p class="text-8xl font-bold text-[#324464]">Kapde</p>
+                         <p class="text-7xl font-bold text-[#324464]">lene hain ?</p>
+                         <p class="text-5xl font-bold text-[#9fb9e6]">Aajao boss, dikha denge</p>
+                    </h1>
+               </div>
+               <div class="border p-10 rounded-md flex flex-col md:flex-row items-center justify-center shadow-xl gap-4 md:min-w-[60rem]">
+                    <img src="/Oneshop/Material/camera.jpg" alt="" class="w-80">
+                    <h1 class="space-y-4">
+                         <p class="text-8xl font-bold text-[#324464]">Cameraman</p>
+                         <p class="text-5xl font-bold text-[#9fb9e6]">Jaldi focus karo !!</p>
+                         <p class="text-5xl font-bold text-[#9fb9e6]">Jaldi focus karo !!</p>
+                         <p class="text-5xl font-bold text-[#9fb9e6]">Jaldi focus karo !!</p>
+                    </h1>
+               </div>
+               <div class="border p-10 rounded-md flex flex-col md:flex-row items-center justify-center shadow-xl gap-4 md:min-w-[60rem]">
+                    <img src="/Oneshop/Material/chair.jpg" alt="" class="w-80">
+                    <h1 class="space-y-4">
+                         <p class="text-9xl font-bold text-[#324464]">Areyy</p>
+                         <p class="text-6xl font-bold text-[#9fb9e6]">bohot jagah hain</p>
+                    </h1>
+               </div>
+          </section>
+     </section>
+     <!--Todays Deals -->
+     <section class="bg-[#ffffff] p-20 sm:p-0 sm:mx-40 my-10 border-green-500">
+          <section class=" pb-5 text-2xl font-bold text-[#484848]">
+               Today's Deals
+          </section>
+          <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-5 place-content-center">
+
+               <!-- First Item -->
+               <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer">
+                    <div class="grid text-center py-2 products">
+                         <img src="/Oneshop/Material/smartwatch1.jpg" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b product_img">
+                         <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848]">
+                              <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap product_name">
+                                   beatXP Marv Raze
+                              </h1>
+                              <h1>₹1,099 | <span class="line-through text-sm">₹4,999</span></h1>
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] top-2 absolute py-2 px-3 text-sm text-white rounded-full">
+                              Flat 78% Off
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] font-bold top-[14.3rem] left-50 absolute py-2 px-3 text-sm text-white rounded-full hidden buy-now">
+                              Buy Now
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Second Item -->
+               <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer">
+                    <div class="grid text-center py-2">
+                         <img src="/Oneshop/Material/smartwatch2.jpg" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b">
+                         <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848]">
+                              <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap">
+                                   boAt Xtend Smart Watch
+                              </h1>
+                              <h1>₹1,996 | <span class="line-through text-sm">₹7,990</span></h1>
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] top-2 absolute py-2 px-3 text-sm text-white rounded-full">
+                              Flat 75% Off
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] font-bold bottom-[3.8rem] left-50 absolute py-2 px-3 text-sm text-white rounded-full hidden buy-now">
+                              Buy Now
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Third Item -->
+               <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer">
+                    <div class="grid text-center py-2">
+                         <img src="/Oneshop/Material/monitor1.jpg" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b">
+                         <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848]">
+                              <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap">
+                                   Samsung 32-Inch(80cm) LCD M5 FHD Smart Monitor
+                              </h1>
+                              <h1>₹20,104 | <span class="line-through text-sm">₹36,000</span></h1>
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] top-2 absolute py-2 px-3 text-sm text-white rounded-full">
+                              Flat 44% Off
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] font-bold bottom-[3.8rem] left-50 absolute py-2 px-3 text-sm text-white rounded-full hidden buy-now">
+                              Buy Now
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Fourth Item -->
+               <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer">
+                    <div class="grid text-center py-2">
+                         <img src="/Oneshop/Material/mobile1.jpg" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b">
+                         <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848]">
+                              <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap">
+                                   iQOO Neo9 Pro 5G
+                              </h1>
+                              <h1>₹20,999 | <span class="line-through text-sm">₹40,999</span></h1>
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] top-2 absolute py-2 px-3 text-sm text-white rounded-full">
+                              Flat 50% Off
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] font-bold bottom-[3.8rem] left-50 absolute py-2 px-3 text-sm text-white rounded-full hidden buy-now">
+                              Buy Now
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Fifth Item -->
+               <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer">
+                    <div class="grid text-center py-2 px-4">
+                         <img src="/Oneshop/Material/bag1.jpg" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b">
+                         <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848]">
+                              <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap">
+                                   Wildcraft Casual Backpack
+                              </h1>
+                              <h1>₹1,609 | <span class="line-through text-sm">₹2,349</span></h1>
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] top-2 absolute py-2 px-3 text-sm text-white rounded-full">
+                              Flat 32% Off
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] font-bold bottom-[3.8rem] left-50 absolute py-2 px-3 text-sm text-white rounded-full hidden buy-now">
+                              Buy Now
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Sixth Item -->
+               <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer">
+                    <div class="grid text-center py-2">
+                         <img src="/Oneshop/Material/shoes.jpg" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b">
+                         <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848]">
+                              <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap">
+                                   ANDUNE Men’s Shoes
+                              </h1>
+                              <h1>₹2,999 | <span class="line-through text-sm">₹5,999</span></h1>
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] top-2 absolute py-2 px-3 text-sm text-white rounded-full">
+                              Flat 50% Off
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] font-bold bottom-[3.8rem] left-50 absolute py-2 px-3 text-sm text-white rounded-full hidden buy-now">
+                              Buy Now
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Seventh Item -->
+               <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer">
+                    <div class="grid text-center py-2">
+                         <img src="/Oneshop/Material/tshirt.jpg" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b">
+                         <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848]">
+                              <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap">
+                                   PUMA Boy's Regular Fit T Shirt
+                              </h1>
+                              <h1>₹539 | <span class="line-through text-sm">₹899</span></h1>
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] top-2 absolute py-2 px-3 text-sm text-white rounded-full">
+                              Flat 40% Off
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] font-bold bottom-[3.8rem] left-50 absolute py-2 px-3 text-sm text-white rounded-full hidden buy-now">
+                              Buy Now
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Eighth Item -->
+               <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer">
+                    <div class="grid text-center py-2">
+                         <img src="/Oneshop/Material/tws.jpg" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b">
+                         <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848]">
+                              <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap">
+                                   OnePlus Nord Buds
+                              </h1>
+                              <h1>₹1,979 | <span class="line-through text-sm">₹3,299</span></h1>
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] top-2 absolute py-2 px-3 text-sm text-white rounded-full">
+                              Flat 40% Off
+                         </div>
+                         <div class="justify-self-center bg-[#E52E06] font-bold bottom-[3.8rem] left-50 absolute py-2 px-3 text-sm text-white rounded-full hidden buy-now">
+                              Buy Now
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </section>
+
+     <!-- Sale -->
+     <section class="w-screen h-auto p-10 border bg-[#9fb9e6]/20 flex items-center justify-around flex-wrap">
+          <h1 class="font-bold space-y-5 text-[#324464]">
+               <p class="text-3xl sm:text-5xl text-center">
+                    Up To 80% Discount
+               </p>
+               <p class="text-2xl sm:text-4xl flex flex-col sm:flex-row items-center gap-8 justify-center sm:justify-start text-center">
+                    Check it Out
+                    <span>
+                         <a href="">
+                              <i class="fa-solid fa-arrow-right text-2xl px-4 sm:px-8 py-2 border border-[#324464] rounded-full text-[#324464] hover:cursor-pointer hover:bg-[#E52E06] hover:text-white hover:border-[#E52E06] hover:transition-all"></i>
+                         </a>
+                    </span>
+               </p>
+          </h1>
+          <div>
+               <img src="/Oneshop/Material/laptops.jpg" alt="" class="sm:max-w-[500px]">
+          </div>
+     </section>
+
+     <!-- Featured Products -->
+     <section class="grid lg:grid-cols-2 p-20 sm:p-0 sm:mx-40 my-10 gap-8 place-content-center">
+          <!-- Electronics -->
+          <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
+               <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+                    Electronics
+               </h1>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
+                    <img src="/Oneshop/Material/mobile3.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5">Mobile from Realme</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/tablet.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5">Tablet from Redmi</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/headphones.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5">Headphones from SONY</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/mouse.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5">Mouse from Logitech</p>
+               </div>
+          </section>
+          <!-- Home Appliances -->
+          <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
+               <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+                    Home Appliances
+               </h1>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
+                    <img src="/Oneshop/Material/airfryer.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Air Fryer from Nutricook</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/sandwichmaker.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Sandwich Maker from Prestige</p>
+               </div> 
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/mixer.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Mixer Grinder from Lifelong</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/coffeemaker1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Coffee Maker from Piegon</p>
+               </div>
+          </section>
+          <!-- Clothing -->
+          <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
+               <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+                    Clothing
+               </h1>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
+                    <img src="/Oneshop/Material/tshirt1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">T-Shirt from Lymio</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/shirt3.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">T-Shirt from Lymio</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/shirt1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Casual Shirt from Laxeric</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/shirt4.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Casual Shirt from Lymio</p>
+               </div>
+          </section>
+          <!-- Books -->
+          <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
+               <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+                    Books
+               </h1>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
+                    <img src="/Oneshop/Material/book1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Alchemist</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/book.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Power of Your Subconscious Mind</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/book2.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Atomic Habits</p>
+               </div>
+               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                    <img src="/Oneshop/Material/book3.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Monk Who Sold His Ferrari</p>
+               </div>
+          </section>
+     </section>
+
+     <!-- Footer -->
+     <footer class="h-80 border-t mt-10">
+          <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5">
+               <section class="sm:col-span-4">
+                    <h1 class="text-5xl font-extrabold text-black/10 sm:text-9xl">
+                         ONE SHOP
+                    </h1>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Account</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Profile</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Orders</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Returns</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Get To Know Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">About Us</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Connect With Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">X</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Facebook</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Instagram</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Let Us Help you</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Privacy Policy</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Guidelines</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Return Centre</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Help</a></li>
+                    </ul>
+               </section>
+          </section>
+          <section class="justify-center flex mt-5">
+               <a href="">
+                    <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer"></i>
+               </a>
+          </section>
+     </footer>
+
+     <!-- JS -->
+     <script src="/OneShop/JS/oneshop.js"></script>
+</body>
+</html>

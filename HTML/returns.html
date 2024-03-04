@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Returns</title>
+     <link rel="stylesheet" href="/OneShop/CSS/o-oneshop.css">
+     <script src="https://kit.fontawesome.com/95749087e1.js" crossorigin="anonymous"></script>
+</head>
+<body class="overflow-x-hidden font-figtree">
+     <nav class="bg-[#ffffff] flex justify-around items-center flex-wrap p-5 sticky top-[0.1px] shadow-lg z-50">
+          <!-- Logo -->
+          <section class="w-40 text-center">
+               <h1 class="text-xl font-extrabold tracking-wider">
+                    <span class="text-[#324464]">O</span>NE <span class="text-[#324464]">S</span>HOP
+               </h1>
+               <h2 class="text-sm tracking-wider">
+                    shop all at one stop
+               </h2>
+          </section>
+          <!-- Search Bar -->
+          <section class="w-[50%] flex items-center relative">
+               <input type="search" placeholder="Serach Anything" class="w-[100%] p-2 border-2 rounded-lg outline-none placeholder:italic placeholder:text-slate-400">
+               <i class="fa-solid fa-magnifying-glass absolute right-3 p-3 bg-[#ffffff] text-[#484848]"></i>
+          </section>
+          <!-- Navigation Menu -->
+          <ul class="flex flex-wrap gap-5 justify-center">
+               <a href="oneshop.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
+               <a href="offers.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Offers</li></a>
+               <a href="returns.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Returns & Orders</li></a>
+               <a href="profile.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Profile</li></a>
+          </ul>
+     </nav>
+     
+     <!-- Returns Products -->
+     <section class="grid p-20 sm:p-0 sm:mx-40 my-10 place-content-center">
+          <section class="grid grid-cols-3 rounded-md p-5 gap-5 place-items-center">
+               
+               <input type="radio" id="return" name="orders" class="peer/return hidden" checked>
+               <label for="return" class="font-bold text-xl text-[#324464]
+               peer-checked/return:border-b-[3px] border-[#E52E06] hover:cursor-pointer">
+                    Returns
+               </label>
+               
+               <input type="radio" id="order" name="orders" class="peer/order hidden">
+               <label for="order" class="font-bold text-xl text-[#324464]
+               peer-checked/order:border-b-[3px] border-[#324464] hover:cursor-pointer">
+                    Orders
+               </label>
+
+               <input type="radio" id="cancel" name="orders" class="peer/cancel hidden">
+               <label for="cancel" class="font-bold text-xl text-[#324464]
+               peer-checked/cancel:border-b-[3px] border-[#ffea4b] hover:cursor-pointer">
+                    Cancelled
+               </label>
+
+               <!-- On Check of Return -->
+               <section class="hidden peer-checked/return:grid ring-red-200 rounded-md
+               col-span-3 grid grid-cols-2 gap-5">
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+
+                                   <div class="text-sm space-y-2 absolute bottom-2">
+                                        <h1 class=" font-bold text-[#324464]">
+                                             Delivered On
+                                             <p>05-Jan-2024</p>
+                                        </h1>
+                                        <h1 class="font-bold text-[#324464]">
+                                             Returned On
+                                             <p>10-Jan-2024</p>
+                                        </h1>
+                                   </div>
+                                   <div class="text-sm text-[#324464] space-y-2 absolute right-0 bottom-2 flex flex-col text-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             Buy Again
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             Write Review
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/smartwatch2.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        boAt Xtend Smart Watch
+                                        <p class="text-sm">
+                                             ₹1,996
+                                        </p>
+                                   </h1>
+
+                                   <div class="text-sm space-y-2 absolute bottom-2">
+                                        <h1 class=" font-bold text-[#324464]">
+                                             Delivered On
+                                             <p>05-Jan-2024</p>
+                                        </h1>
+                                        <h1 class="font-bold text-[#324464]">
+                                             Returned On
+                                             <p>10-Jan-2024</p>
+                                        </h1>
+                                   </div>
+                                   <div class="text-sm text-[#324464] space-y-2 absolute right-0 bottom-2 flex flex-col text-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             Buy Again
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             Write Review
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/headphones.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        SONY Headphones
+                                        <p class="text-sm">
+                                             ₹6,000
+                                        </p>
+                                   </h1>
+
+                                   <div class="text-sm space-y-2 absolute bottom-2">
+                                        <h1 class=" font-bold text-[#324464]">
+                                             Delivered On
+                                             <p>05-Jan-2024</p>
+                                        </h1>
+                                        <h1 class="font-bold text-[#324464]">
+                                             Returned On
+                                             <p>10-Jan-2024</p>
+                                        </h1>
+                                   </div>
+                                   <div class="text-sm text-[#324464] space-y-2 absolute right-0 bottom-2 flex flex-col text-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             Buy Again
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             Write Review
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/tshirt1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Lymio Men's T-Shirt
+                                        <p class="text-sm">
+                                             ₹750
+                                        </p>
+                                   </h1>
+
+                                   <div class="text-sm space-y-2 absolute bottom-2">
+                                        <h1 class=" font-bold text-[#324464]">
+                                             Delivered On
+                                             <p>05-Jan-2024</p>
+                                        </h1>
+                                        <h1 class="font-bold text-[#324464]">
+                                             Returned On
+                                             <p>10-Jan-2024</p>
+                                        </h1>
+                                   </div>
+                                   <div class="text-sm text-[#324464] space-y-2 absolute right-0 bottom-2 flex flex-col text-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             Buy Again
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             Write Review
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
+               <!-- On Check of Orders -->
+               <section class="hidden peer-checked/order:grid ring-red-200 rounded-md
+               col-span-3 grid grid-cols-2 gap-5">
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Cancel Order
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Cancel Order
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Cancel Order
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Cancel Order
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
+               <!-- On Check of Returns -->
+               <section class="hidden peer-checked/cancel:grid ring-red-200 rounded-md
+               col-span-3 grid grid-cols-2 gap-5">
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#324464] hover:text-white rounded-full">
+                                             Order Again
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#324464] hover:text-white rounded-full">
+                                             Order Again
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#324464] hover:text-white rounded-full">
+                                             Order Again
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-lg">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1>
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                                   <h1>
+                                        Total Order Amount
+                                        <p>#Amount#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                                   <img src="/OneShop/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,609
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Item
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#324464] hover:text-white rounded-full">
+                                             Order Again
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+          </section>
+     </section>
+
+     <!-- Footer -->
+     <footer class="h-80 border-t mt-10">
+          <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5">
+               <section class="sm:col-span-4">
+                    <h1 class="text-5xl font-extrabold text-black/10 sm:text-9xl">
+                         ONE SHOP
+                    </h1>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Account</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Profile</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Orders</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Returns</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Get To Know Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">About Us</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Connect With Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">X</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Facebook</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Instagram</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Let Us Help you</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Privacy Policy</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Guidelines</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Return Centre</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Help</a></li>
+                    </ul>
+               </section>
+          </section>
+          <section class="justify-center flex mt-5">
+               <a href="">
+                    <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer"></i>
+               </a>
+          </section>
+     </footer>
+
+     <!-- JS -->
+     <script src="/OneShop/JS/oneshop.js"></script>
+</body>
+</html>
