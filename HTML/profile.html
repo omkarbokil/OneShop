@@ -3,8 +3,8 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Product</title>
-     <link rel="stylesheet" href="/OneShop/CSS/o-oneshop.css">
+     <title>Profile</title>
+     <link rel="stylesheet" href="/CSS/o-oneshop.css">
      <script src="https://kit.fontawesome.com/95749087e1.js" crossorigin="anonymous"></script>
 </head>
 <body class="overflow-x-hidden font-figtree">
@@ -25,20 +25,58 @@
           </section>
           <!-- Navigation Menu -->
           <ul class="flex flex-wrap gap-5 justify-center">
-               <a href="oneshop.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
+               <a href="/oneshop.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
                <a href="offers.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Offers</li></a>
                <a href="returns.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Returns & Orders</li></a>
                <a href="profile.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Profile</li></a>
           </ul>
      </nav>
      
-     <!-- Returns Products -->
-     <section class="grid p-20 sm:p-0 sm:mx-40 my-10 place-content-center">
-          <div>
-               <h1 id="ok">
+     <!-- Profile -->
+     <section class="grid grid-cols-4 p-20 sm:p-0 sm:mx-40 my-10 gap-5">
+          <section class="grid place-items-center p-5 gap-3 shadow-md rounded-md">
+               <div class="relative">
+                    <input type="file" class="hidden" id="file_upload">
+                    <img src="/Material/user-img.jpg" alt="" class="min-w-52 max-w-52 aspect-[1/1] p-5 justify-self-center rounded-full border">
+                    <!-- Upload Picture Icon -->
+                    <div class="absolute bottom-5 right-3 hover:cursor-pointer" id="up_icon">
+                         <label for="file_upload" class="hover:cursor-pointer"><i class="fa-solid fa-camera border p-2 rounded-full bg-[#324464] text-white"></i></label>
+                         <div class="absolute text-nowrap text-sm border py-1 px-2 bg-black/60 top-10 rounded-md text-white hidden font-bold" id="upload_picture">
+                              Upload Picture
+                         </div>
+                    </div>
+               </div>
+               <!-- UserName -->
+               <div class="py-1 px-16">
+                    <h1>
+                         Omkar Bokil
+                    </h1>
+               </div>
+               <!-- Other Profile Options -->
+               <div class=" p-5 grid gap-3 text-center">
+                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10">
+                         Orders
+                    </div>
+                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10">
+                         Wishlist
+                    </div>
+                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10">
+                         Gift Cards
+                    </div>
+                    <input type="radio" id="manage_address" name="profile_menus" class="hidden peer/address">
+                    <label for="manage_address" class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10 ">Manage Address</label>
 
-               </h1>
-          </div>
+                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10">
+                         Manage Wallet
+                    </div>
+                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-[#E52E06] hover:text-white">
+                         Logout
+                    </div>
+               </div>
+          </section>
+          <section class="col-span-3 shadow-md">
+
+          </section>
      </section>
 
      <!-- Footer -->
@@ -89,6 +127,6 @@
      </footer>
 
      <!-- JS -->
-     <script src="/OneShop/JS/oneshop.js"></script>
+     <script src="/JS/oneshop.js"></script>
 </body>
 </html>
