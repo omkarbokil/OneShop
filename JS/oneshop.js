@@ -3,11 +3,9 @@ let itemCard1 = document.querySelectorAll(".item-card-1");
 let buyNow = document.querySelectorAll(".buy-now");
 let offer = document.querySelectorAll(".offer");
 let offer1 = document.querySelectorAll(".offer1");
-let uploadPicture = document.querySelector("#upload_picture")
-let upIcon = document.querySelector("#up_icon")
-let productName = document.querySelectorAll(".product_name")
-let ok = document.querySelectorAll("#ok")
-let products = document.querySelector(".products")
+let productName = document.querySelectorAll(".product_name");
+let ok = document.querySelectorAll("#ok");
+let products = document.querySelector(".products");
 
 // function product(){
 //      window.location.href = "/HTML/OneShop/product.html";
@@ -50,10 +48,19 @@ offer.forEach((val, ind) => {
      })
 })
 
-upIcon.addEventListener("mouseenter", () =>{
-     uploadPicture.classList.remove("hidden");
+// Collapsible Menu
+let collapsibleMenuOpen = document.querySelector("#collapsible-menu-open");
+let collapsibleMenuClose = document.querySelector("#collapsible-menu-close");
+let collapsibleMenu = document.querySelector("#collapsible-menu");
+
+collapsibleMenuOpen.addEventListener("click", () => {
+     // collapsibleMenu.classList.toggle("hidden");
+     collapsibleMenu.style.top = 0;
+     collapsibleMenuClose.classList.toggle("hidden");
 })
 
-upIcon.addEventListener("mouseleave", () =>{
-     uploadPicture.classList.add("hidden");
+collapsibleMenuClose.addEventListener("click", () => {
+     // collapsibleMenu.classList.toggle("hidden");
+     collapsibleMenu.style.top = "-8rem";
+     collapsibleMenuClose.classList.toggle("hidden");
 })

@@ -9,7 +9,7 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body class="overflow-x-hidden font-figtree">
-     <nav class="bg-[#ffffff] flex flex-col md:flex-row justify-around items-center gap-3 p-5 sticky top-[0.1px] shadow-lg z-50">
+     <nav class="bg-[#ffffff] flex flex-col md:flex-row justify-around items-center gap-3 p-5 sticky top-[0.1px] shadow-lg z-50 relative">
           <!-- Logo -->
           <section class="w-40 text-center hidden md:block">
                <h1 class="text-xl font-extrabold tracking-wider">
@@ -28,9 +28,11 @@
                     <input type="search" placeholder="Serach Anything" class="w-[100%] p-2 rounded-lg outline-none placeholder:italic placeholder:text-slate-400">
                </div>
                <!-- Collapsible Menu -->
-               <span class="material-symbols-outlined text-[#484848] p-2 border-2 rounded-full hover:bg-black/10" role="button">
-                    menu
-               </span>
+               <div class="block sm:hidden">
+                    <span class="material-symbols-outlined text-[#484848] p-2 border-2 rounded-full hover:bg-black/10 sm:ring-0 ring-1 ring-[#324464]" role="button" id="collapsible-menu-open">
+                         menu
+                    </span>
+               </div>
           </section>
           <!-- Navigation Menu -->
           <ul class=" gap-5 justify-center hidden sm:flex">
@@ -39,6 +41,21 @@
                <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3 line-clamp-1 text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
                <a href="/HTML/profile.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Profile</li></a>
           </ul>
+
+          <!-- Collapsible Menu -->
+          <section class="absolute text-white -top-24 transition-all" id="collapsible-menu">
+               <ul class=" gap-5 justify-center flex bg-[#324464] p-8 w-screen">
+                    <a href=""><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Home</li></a>
+                    <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Offers</li></a>
+                    <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3 line-clamp-1 text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
+                    <a href="/HTML/profile.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Profile</li></a>
+               </ul>
+          </section>
+          <section class="absolute top-[6.5rem] hidden" id="collapsible-menu-close">
+               <span class="material-symbols-outlined p-2 bg-[#324464] text-white rounded-full">
+                    close
+               </span>
+          </section>
      </nav>
 
      <!-- Banner Images -->

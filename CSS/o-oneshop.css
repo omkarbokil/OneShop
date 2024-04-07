@@ -608,6 +608,58 @@ video {
   top: 14.3rem;
 }
 
+.top-52{
+  top: 13rem;
+}
+
+.top-\[\]{
+  top: ;
+}
+
+.top-\[10rem\]{
+  top: 10rem;
+}
+
+.top-\[5rem\]{
+  top: 5rem;
+}
+
+.top-\[7rem\]{
+  top: 7rem;
+}
+
+.top-\[6rem\]{
+  top: 6rem;
+}
+
+.top-\[6\.5rem\]{
+  top: 6.5rem;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.-top-0{
+  top: -0px;
+}
+
+.-top-16{
+  top: -4rem;
+}
+
+.-top-2{
+  top: -0.5rem;
+}
+
+.-top-24{
+  top: -6rem;
+}
+
+.-top-4{
+  top: -1rem;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -634,6 +686,10 @@ video {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -1035,6 +1091,10 @@ video {
   padding: 1.25rem;
 }
 
+.p-8{
+  padding: 2rem;
+}
+
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1183,6 +1243,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .line-through{
   text-decoration-line: line-through;
 }
@@ -1238,6 +1303,14 @@ video {
 
 .transition-all{
   transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1325,6 +1398,10 @@ video {
   background-color: rgb(0 0 0 / 0.1);
 }
 
+.hover\:bg-white\/10:hover{
+  background-color: rgb(255 255 255 / 0.1);
+}
+
 .hover\:bg-gradient-to-t:hover{
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
@@ -1402,6 +1479,10 @@ video {
 
   .sm\:flex{
     display: flex;
+  }
+
+  .sm\:hidden{
+    display: none;
   }
 
   .sm\:max-w-\[500px\]{
