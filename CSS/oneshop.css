@@ -12,13 +12,12 @@
  /* Track */
  ::-webkit-scrollbar-track {
      background: #ffffff;
-     margin: 2.5rem;
+     /* margin: 2.5rem; */
  }
   
  /* Handle */
  ::-webkit-scrollbar-thumb {
      background: #E3E6E6;
-     border-radius: 10px;
  }
   
  /* Handle on hover */
