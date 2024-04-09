@@ -56,11 +56,11 @@ let collapsibleMenu = document.querySelector("#collapsible-menu");
 collapsibleMenuOpen.addEventListener("click", () => {
      // collapsibleMenu.classList.toggle("hidden");
      collapsibleMenu.style.top = 0;
-     collapsibleMenuClose.classList.toggle("hidden");
+     // collapsibleMenuClose.classList.toggle("hidden");
 })
 
 collapsibleMenuClose.addEventListener("click", () => {
      // collapsibleMenu.classList.toggle("hidden");
-     collapsibleMenu.style.top = "-8rem";
-     collapsibleMenuClose.classList.toggle("hidden");
+     collapsibleMenu.style.top = "-50rem";
+     // collapsibleMenuClose.classList.toggle("hidden");
 })
