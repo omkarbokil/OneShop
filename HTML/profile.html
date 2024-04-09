@@ -59,49 +59,269 @@
      </nav>
      
      <!-- Profile -->
-     <section class="grid grid-cols-4 p-20 sm:p-0 sm:mx-40 my-10 gap-5">
-          <section class="grid place-items-center p-5 gap-3 shadow-md rounded-md">
+     <section class="grid sm:p-0 sm:mx-40 my-10 gap-5">
+          <section class="grid place-items-center gap-3 shadow-md rounded-md">
+               <!-- User Image and Image Upload -->
                <div class="relative">
                     <input type="file" class="hidden" id="file_upload">
-                    <img src="/Material/user-img.jpg" alt="" class="min-w-52 max-w-52 aspect-[1/1] p-5 justify-self-center rounded-full border">
+                    <img src="/Material/user-img.jpg" alt="" class="min-w-52  max-w-52  aspect-[1/1] p-5 justify-self-center rounded-full border">
                     <!-- Upload Picture Icon -->
                     <div class="absolute bottom-5 right-3 hover:cursor-pointer" id="up_icon">
                          <label for="file_upload" class="hover:cursor-pointer"><i class="fa-solid fa-camera border p-2 rounded-full bg-[#324464] text-white"></i></label>
-                         <div class="absolute text-nowrap text-sm border py-1 px-2 bg-black/60 top-10 rounded-md text-white hidden font-bold" id="upload_picture">
+                         <div class="absolute text-nowrap text-sm border py-1 px-2 bg-black/60 top-10 rounded-md text-white hidden font-bold z-50" id="upload_picture">
                               Upload Picture
                          </div>
                     </div>
                </div>
-               <!-- UserName -->
-               <div class="py-1 px-16">
-                    <h1>
-                         Omkar Bokil
-                    </h1>
-               </div>
-               <!-- Other Profile Options -->
-               <div class=" p-5 grid gap-3 text-center">
-                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10">
+               <div class="p-5 text-black text-lg grid gap-5 grid-cols-2 md:grid-cols-3 xl:grid-cols-6 justify-center text-center">
+                    <input type="radio" id="order" name="orders" class="peer/order hidden">
+                    <label for="order" class="hover:cursor-pointer py-5 px-10 rounded-md bg-black/10 hover:-translate-y-0.5 transition-all peer-checked/order:bg-[#324464] peer-checked/order:text-white">
                          Orders
-                    </div>
-                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10">
+                    </label>
+
+                    <input type="radio" id="wishlist" name="orders" class="peer/wishlist hidden">
+                    <label for="wishlist" class="hover:cursor-pointer py-5 px-10 rounded-md bg-black/10 hover:-translate-y-0.5 transition-all peer-checked/wishlist:bg-[#324464] peer-checked/wishlist:text-white"">
                          Wishlist
-                    </div>
-                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10">
-                         Gift Cards
-                    </div>
-                    <input type="radio" id="manage_address" name="profile_menus" class="hidden peer/address">
-                    <label for="manage_address" class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10 ">Manage Address</label>
-
-                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-black/10">
-                         Manage Wallet
-                    </div>
-                    <div class="space-x-2 py-1 px-10 rounded-full cursor-pointer hover:bg-[#E52E06] hover:text-white">
+                    </label>
+     
+                    <input type="radio" id="giftcards" name="orders" class="peer/giftcards hidden" checked>
+                    <label for="giftcards" class="hover:cursor-pointer py-5 px-10 rounded-md bg-black/10 hover:-translate-y-0.5 transition-all peer-checked/giftcards:bg-[#324464] peer-checked/giftcards:text-white"">
+                         Giftcards
+                    </label>
+     
+                    <input type="radio" id="address" name="orders" class="peer/address hidden">
+                    <label for="address" class="hover:cursor-pointer py-5 px-10 rounded-md bg-black/10 hover:-translate-y-0.5 transition-all peer-checked/address:bg-[#324464] peer-checked/address:text-white"">
+                         Address
+                    </label>
+     
+                    <input type="radio" id="wallet" name="orders" class="peer/wallet hidden">
+                    <label for="wallet" class="hover:cursor-pointer py-5 px-10 rounded-md bg-black/10 hover:-translate-y-0.5 transition-all peer-checked/wallet:bg-[#324464] peer-checked/wallet:text-white"">
+                         Wallet
+                    </label>
+     
+                    <input type="radio" id="logout" name="orders" class="peer/logout hidden">
+                    <label for="logout" class="text-white hover:cursor-pointer py-5 px-10 rounded-md bg-[#E52E06]">
                          Logout
-                    </div>
-               </div>
-          </section>
-          <section class="col-span-3 shadow-md">
+                    </label>
 
+                    <!-- On Order Checked -->
+                    <section class="hidden peer-checked/order:grid col-span-2 md:col-span-3 xl:col-span-6">
+                         <div class="grid md:grid-cols-3 xl:grid-cols-5 gap-5">
+                              <div class="rounded-md hover:cursor-pointer justify-self-center border hover:shadow-md transition-all p-5 overflow-hidden max-w-52">
+                                   <img src="/Material/smartwatch2.jpg" alt="" class="min-w-44  p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        boAt Xtend Smart Watch
+                                        <p class="text-sm">
+                                             ₹3,500
+                                        </p>
+                                   </h1>
+                              </div>
+                              <div class="rounded-md hover:cursor-pointer justify-self-center border hover:shadow-md transition-all p-5 overflow-hidden max-w-52">
+                                   <img src="/Material/chair.jpg" alt="" class="min-w-44  p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        DROGO Ergonomic Office Chair for Work
+                                        <p class="text-sm">
+                                             ₹10,000
+                                        </p>
+                                   </h1>
+                              </div>
+                              <div class="rounded-md hover:cursor-pointer justify-self-center border hover:shadow-md transition-all p-5 overflow-hidden max-w-52">
+                                   <img src="/Material/camera.jpg" alt="" class="min-w-44 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        GoPro HERO12
+                                        <p class="text-sm">
+                                             ₹37,990
+                                        </p>
+                                   </h1>
+                              </div>
+                              <div class="rounded-md hover:cursor-pointer justify-self-center border hover:shadow-md transition-all p-5 overflow-hidden max-w-52">
+                                   <img src="/Material/tws.jpg" alt="" class="min-w-44  p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        OnePlus Nord Buds 2 TWS
+                                        <p class="text-sm">
+                                             ₹2,999
+                                        </p>
+                                   </h1>
+                              </div>
+                              <div class="rounded-md hover:cursor-pointer justify-self-center border hover:shadow-md transition-all p-5 overflow-hidden max-w-52">
+                                   <img src="/Material/mobile3.jpg" alt="" class="min-w-44  p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        HONOR 90
+                                        <p class="text-sm">
+                                             ₹25,000
+                                        </p>
+                                   </h1>
+                              </div>
+                         </div>
+                    </section>
+
+                    <!-- On Wishlist Checked -->
+                    <section class="hidden peer-checked/wishlist:grid col-span-2 md:col-span-3 xl:col-span-6">
+                         <div class="grid xl:grid-cols-2 gap-5">
+                              <!-- Product One -->
+                              <div class="grid md:grid-cols-3 gap-3 place-items-center border rounded-md hover:cursor-pointer hover:shadow-md p-5 transition-all">
+                                   <div>
+                                        <img src="/Material/smartwatch2.jpg" alt="" class="max-w-44  p-5 aspect-[1/1] object-contain justify-self-center">
+                                   </div>
+                                   <h1 class="max-w-36 text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        boAt Xtend Smart Watch
+                                        <p class="text-sm">
+                                             ₹3,500
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-row md:flex-col text-center gap-3">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full hidden sm:block">
+                                             View Product
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#FFD814] hover:text-black rounded-full">
+                                             Add To Cart
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Remove
+                                        </a>
+                                   </div>
+                              </div>
+                              <!-- Product Two -->
+                              <div class="grid md:grid-cols-3 gap-3 place-items-center border rounded-md hover:cursor-pointer hover:shadow-md p-5 transition-all">
+                                   <div>
+                                        <img src="/Material/bag1.jpg" alt="" class="max-w-44  p-5 aspect-[1/1] object-contain justify-self-center">
+                                   </div>
+                                   <h1 class="max-w-36 text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Wildcraft Casual Backpack
+                                        <p class="text-sm">
+                                             ₹1,500
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-row md:flex-col text-center gap-3">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full hidden sm:block">
+                                             View Product
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#FFD814] hover:text-black rounded-full">
+                                             Add To Cart
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Remove
+                                        </a>
+                                   </div>
+                              </div>
+                              <!-- Product Three -->
+                              <div class="grid md:grid-cols-3 gap-3 place-items-center border rounded-md hover:cursor-pointer hover:shadow-md p-5 transition-all">
+                                   <div>
+                                        <img src="/Material/book.jpg" alt="" class="max-w-44  p-5 aspect-[1/1] object-contain justify-self-center">
+                                   </div>
+                                   <h1 class="max-w-36 text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        The Power Of Subconscious Mind
+                                        <p class="text-sm">
+                                             ₹499
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-row md:flex-col text-center gap-3">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full hidden sm:block">
+                                             View Product
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#FFD814] hover:text-black rounded-full">
+                                             Add To Cart
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Remove
+                                        </a>
+                                   </div>
+                              </div>
+                              <!-- Product Four -->
+                              <div class="grid md:grid-cols-3 gap-3 place-items-center border rounded-md hover:cursor-pointer hover:shadow-md p-5 transition-all">
+                                   <div>
+                                        <img src="/Material/coffeemaker.jpg" alt="" class="max-w-44  p-5 aspect-[1/1] object-contain justify-self-center">
+                                   </div>
+                                   <h1 class="max-w-36 text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Philips Drip Coffee Maker
+                                        <p class="text-sm">
+                                             ₹3,190
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-row md:flex-col text-center gap-3">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full hidden sm:block">
+                                             View Product
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#FFD814] hover:text-black rounded-full">
+                                             Add To Cart
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Remove
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </section>
+
+                    <!-- On Giftcards Checked -->
+                    <section class="hidden peer-checked/giftcards:grid col-span-2 md:col-span-3 xl:col-span-6">
+                         <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+                              <!-- Product One -->
+                              <div class="grid gap-3 border rounded-md hover:cursor-pointer hover:shadow-md transition-all p-5">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Birthday Card
+                                        <p class="text-sm">
+                                             ₹100
+                                        </p>
+                                   </h1>
+                              </div>
+                              <!-- Product Two -->
+                              <div class="grid gap-3 border rounded-md hover:cursor-pointer hover:shadow-md transition-all p-5">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Wedding Card
+                                        <p class="text-sm">
+                                             ₹500
+                                        </p>
+                                   </h1>
+                              </div>
+                              <!-- Product Three -->
+                              <div class="grid gap-3 border rounded-md hover:cursor-pointer hover:shadow-md transition-all p-5">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Party Card
+                                        <p class="text-sm">
+                                             ₹200
+                                        </p>
+                                   </h1>
+                              </div>
+                              <!-- Product Four -->
+                              <div class="grid gap-3 border rounded-md hover:cursor-pointer hover:shadow-md transition-all p-5">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Congratulations Card
+                                        <p class="text-sm">
+                                             ₹199
+                                        </p>
+                                   </h1>
+                              </div>
+                              <!-- Product Five -->
+                              <div class="grid gap-3 border rounded-md hover:cursor-pointer hover:shadow-md transition-all p-5">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Best Wishes Card
+                                        <p class="text-sm">
+                                             ₹50
+                                        </p>
+                                   </h1>
+                              </div>
+                              <!-- Product Six -->
+                              <div class="grid gap-3 border rounded-md hover:cursor-pointer hover:shadow-md transition-all p-5">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Star Card
+                                        <p class="text-sm">
+                                             ₹1,000
+                                        </p>
+                                   </h1>
+                              </div>
+                              <!-- Product Seven -->
+                              <div class="grid gap-3 border rounded-md hover:cursor-pointer hover:shadow-md transition-all p-5">
+                                   <h1 class="text-ellipsis overflow-hidden text-nowrap text-lg font-bold text-[#324464]">
+                                        Friends Card
+                                        <p class="text-sm">
+                                             ₹100
+                                        </p>
+                                   </h1>
+                              </div>
+                         </div>
+                    </section>
+               </div>
           </section>
      </section>
 
@@ -153,6 +373,6 @@
      </footer>
 
      <!-- JS -->
-     <script src="/JS/oneshop.js"></script>
+     <script src="/JS/profile.js"></script>
 </body>
 </html>

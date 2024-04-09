@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Profile</title>
+     <link rel="stylesheet" href="/CSS/o-oneshop.css">
+     <script src="https://kit.fontawesome.com/95749087e1.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body class="overflow-x-hidden font-figtree">
+     <nav class="bg-[#ffffff] flex flex-col md:flex-row items-center gap-3 p-5 sticky top-[0.1px] shadow-md z-50" id="navbar">
+          <!-- Logo -->
+          <section class="w-40 text-center hidden md:block">
+               <h1 class="text-xl font-extrabold tracking-wider">
+                    <span class="text-[#324464]">O</span>NE <span class="text-[#324464]">S</span>HOP
+               </h1>
+               <h2 class="text-sm tracking-wider text-nowrap">
+                    shop all at one stop
+               </h2>
+          </section>
+          <!-- Search Bar -->
+          <section class="w-[100%] flex items-center gap-2 justify-center">
+               <div class="flex items-center border-2 rounded-lg min-w-[80%]">
+                    <span class="material-symbols-outlined text-[#484848] p-2">
+                         search
+                    </span>
+                    <input type="search" placeholder="Serach" class="w-[100%] p-2 rounded-lg outline-none placeholder:italic      placeholder:text-slate-400">
+               </div>
+               <!-- Collapsible Menu -->
+               <div class="block sm:hidden">
+                    <span class="material-symbols-outlined text-[#484848] p-2 border-2 rounded-full hover:bg-black/10" role="button"   id="collapsible-menu-open">
+                         menu
+                    </span>
+               </div>
+          </section>
+          <!-- Navigation Menu -->
+          <ul class=" gap-5 justify-center hidden sm:flex">
+               <a href="/index.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
+               <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Offers</li></a>
+               <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3 line-clamp-1  text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
+               <a href="/HTML/profile.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Profile</li></a>
+          </ul>
+
+          <!-- Collapsible Menu -->
+          <section class="absolute text-white -top-96 transition-all flex flex-col items-center" id="collapsible-menu">
+               <ul class=" gap-5 justify-center bg-[#324464] p-8 w-screen flex flex-col flex-wrap items-center">
+                    <a href="/index.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Home</li></a>
+                    <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Offers</li></a>
+                    <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3 line-clamp-1  text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
+                    <a href="/HTML/profile.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Profile</li></a>
+               </ul>
+               <section class="absolute -bottom-14" id="collapsible-menu-close">
+                    <span class="material-symbols-outlined p-2 bg-[#324464] text-white rounded-full">
+                         close
+                    </span>
+               </section>
+          </section>
+     </nav>
+     
+     <!-- Profile -->
+     <section class="grid grid-cols-4 p-20 sm:p-0 sm:mx-40 my-10 gap-5">
+          <section class="grid place-items-center p-5 gap-3 shadow-md rounded-md">
+               <div class="relative">
+                    <input type="file" class="hidden" id="file_upload">
+                    <img src="/Material/user-img.jpg" alt="" class="min-w-52 max-w-52 aspect-[1/1] p-5 justify-self-center rounded-full border">
+                    <!-- Upload Picture Icon -->
+                    <div class="absolute bottom-5 right-3 hover:cursor-pointer" id="up_icon">
+                         <label for="file_upload" class="hover:cursor-pointer"><i class="fa-solid fa-camera border p-2 rounded-full bg-[#324464] text-white"></i></label>
+                         <div class="absolute text-nowrap text-sm border py-1 px-2 bg-black/60 top-10 rounded-md text-white hidden font-bold" id="upload_picture">
+                              Upload Picture
+                         </div>
+                    </div>
+               </div>
+               <!-- Other Profile Options -->
+               <div class=" p-5 grid gap-3 text-center">
+                    <input type="file" class="hidden" id="file_upload">
+                    <img src="/Material/user-img.jpg" alt="" class="min-w-52 max-w-52 aspect-[1/1] p-5 justify-self-center rounded-full border">
+                    <!-- Upload Picture Icon -->
+                    <div class="absolute bottom-5 right-3 hover:cursor-pointer" id="up_icon">
+                         <label for="file_upload" class="hover:cursor-pointer"><i class="fa-solid fa-camera border p-2 rounded-full bg-[#324464] text-white"></i></label>
+                         <div class="absolute text-nowrap text-sm border py-1 px-2 bg-black/60 top-10 rounded-md text-white hidden font-bold" id="upload_picture">
+                              Upload Picture
+                         </div>
+                    </div>
+                    <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
+                    <label for="order" class="hover:cursor-pointer hover:bg-black/10 6] py-1 px-10 rounded-full">
+                         Orders
+                    </label>
+
+                    <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
+                    <label for="order" class="hover:cursor-pointer hover:bg-black/10 6] py-1 px-10 rounded-full">
+                         Wishlist
+                    </label>
+
+                    <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
+                    <label for="order" class="hover:cursor-pointer hover:bg-black/10 6] py-1 px-10 rounded-full">
+                         Giftcards
+                    </label>
+
+                    <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
+                    <label for="order" class="hover:cursor-pointer hover:bg-black/10 6] py-1 px-10 rounded-full text-nowrap">
+                         Manage Address
+                    </label>
+
+                    <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
+                    <label for="order" class="hover:cursor-pointer hover:bg-black/10 6] py-1 px-10 rounded-full">
+                         Manage Wallet
+                    </label>
+
+                    <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
+                    <label for="order" class="hover:cursor-pointer hover:bg-[#E52E06] py-1 px-10 rounded-full">
+                         Logout
+                    </label>
+               </div>
+               <section class="col-span-3 shadow-md">
+     
+               </section>
+          </section>
+     </section>
+
+     <!-- Footer -->
+     <footer class="h-80 border-t mt-10 hidden sm:block" id="footer">
+          <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5">
+               <section class="sm:col-span-4">
+                    <h1 class="text-5xl font-extrabold text-black/10 sm:text-9xl">
+                         ONE SHOP
+                    </h1>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Account</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Profile</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Orders</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Returns</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Get To Know Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">About Us</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Connect With Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">X</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Facebook</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Instagram</a></li>
+                    </ul>
+               </section>
+               <section>
+                    <ul class="space-y-2">
+                         <li class="text-black/50 font-bold text-md">Let Us Help you</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Privacy Policy</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Guidelines</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Return Centre</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Help</a></li>
+                    </ul>
+               </section>
+          </section>
+          <section class="justify-center flex mt-5">
+               <a href="">
+                    <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer"></i>
+               </a>
+          </section>
+     </footer>
+
+     <!-- JS -->
+     <script src="/JS/oneshop.js"></script>
+</body>
+</html>
