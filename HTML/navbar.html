@@ -1,0 +1,46 @@
+     <!-- Logo -->
+     <section class="w-40 text-center hidden md:block">
+          <h1 class="text-xl font-extrabold tracking-wider">
+               <span class="text-[#324464]">O</span>NE <span class="text-[#324464]">S</span>HOP
+          </h1>
+          <h2 class="text-sm tracking-wider text-nowrap">
+               shop all at one stop
+          </h2>
+     </section>
+     <!-- Search Bar -->
+     <section class="w-[100%] flex items-center gap-2 justify-center">
+          <div class="flex items-center border-2 rounded-lg min-w-[80%]">
+               <span class="material-symbols-outlined text-[#484848] p-2">
+                    search
+               </span>
+               <input type="search" placeholder="Serach" class="w-[100%] p-2 rounded-lg outline-none placeholder:italic placeholder:text-slate-400">
+          </div>
+          <!-- Collapsible Menu -->
+          <div class="block sm:hidden">
+               <span class="material-symbols-outlined text-[#484848] p-2 border-2 rounded-full hover:bg-black/10" role="button" id="collapsible-menu-open">
+                    menu
+               </span>
+          </div>
+     </section>
+     <!-- Navigation Menu -->
+     <ul class=" gap-5 justify-center hidden sm:flex">
+          <a href="/index.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
+          <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Offers</li></a>
+          <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3 line-clamp-1 text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
+          <a href="/HTML/profile.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Profile</li></a>
+     </ul>
+
+     <!-- Collapsible Menu -->
+     <section class="absolute text-white -top-96 transition-all flex flex-col items-center" id="collapsible-menu">
+          <ul class=" gap-5 justify-center bg-[#324464] p-8 w-screen flex flex-col flex-wrap items-center">
+               <a href=""><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Home</li></a>
+               <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Offers</li></a>
+               <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3 line-clamp-1 text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
+               <a href="/HTML/profile.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Profile</li></a>
+          </ul>
+          <section class="absolute -bottom-14" id="collapsible-menu-close">
+               <span class="material-symbols-outlined p-2 bg-[#324464] text-white rounded-full">
+                    close
+               </span>
+          </section>
+     </section>
