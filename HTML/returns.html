@@ -59,29 +59,180 @@
      </nav>
      
      <!-- Returns Products -->
-     <section class="grid p-20 sm:p-0 sm:mx-40 my-10 place-content-center">
-          <section class="grid grid-cols-3 rounded-md p-5 gap-5 place-items-center">
+     <section class="grid sm:p-0 sm:mx-40 my-10 place-content-center">
+          <section class="grid sm:grid-cols-3 rounded-md gap-5 place-items-center">
 
                <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
-               <label for="order" class="font-bold text-xl text-[#324464]
+               <label for="order" class="font-bold text-md md:text-xl text-[#324464]
                peer-checked/order:border-b-[3px] border-[#324464] hover:cursor-pointer">
                     Orders
                </label>
 
                <input type="radio" id="return" name="orders" class="peer/return hidden">
-               <label for="return" class="font-bold text-xl text-[#324464]
+               <label for="return" class="font-bold text-md md:text-xl text-[#324464]
                peer-checked/return:border-b-[3px] border-[#E52E06] hover:cursor-pointer">
                     Returns
                </label>
 
                <input type="radio" id="cancel" name="orders" class="peer/cancel hidden">
-               <label for="cancel" class="font-bold text-xl text-[#324464]
+               <label for="cancel" class="font-bold text-md md:text-xl text-[#324464]
                peer-checked/cancel:border-b-[3px] border-[#ffea4b] hover:cursor-pointer">
                     Cancelled
                </label>
 
                <!-- On Check of Orders -->
-               <section class="hidden peer-checked/order:grid ring-red-200 rounded-md
+               <section class="hidden px-5 peer-checked/order:grid ring-red-200 rounded-md
+               col-span-3 lg:grid-cols-2 gap-5">
+                    <!-- Product One -->
+                    <div class="grid border rounded-md text-sm shadow-md">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1 class="text-nowrap">
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid md:grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-center">
+                                   <img src="/Material/smartwatch1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        beatXP Marv Raze
+                                        <p class="text-sm">
+                                             ₹1,099
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Product
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Cancel Order
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Product Two -->
+                    <div class="grid border rounded-md text-sm shadow-md">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1 class="text-nowrap">
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid md:grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-center">
+                                   <img src="/Material/smartwatch2.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        boAt Xtend Smart Watch
+                                        <p class="text-sm">
+                                             ₹3,500
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Product
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Cancel Order
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-md">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1 class="text-nowrap">
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid md:grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-start">
+                                   <img src="/Material/mobile3.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        HONOR 90
+                                        <p class="text-sm">
+                                             ₹20,000
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Product
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Cancel Order
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-md">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1 class="text-nowrap">
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid md:grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-start">
+                                   <img src="/Material/books.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Books Combo
+                                        <p class="text-sm">
+                                             ₹999
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
+                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                             View Product
+                                        </a>
+                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                             Cancel Order
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
+               <!-- On Check of Return -->
+               <section class="hidden px-5 peer-checked/return:grid ring-red-200 rounded-md
                col-span-3 lg:grid-cols-2 gap-5">
                     <div class="grid border rounded-md text-sm shadow-md">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
@@ -97,281 +248,19 @@
                                    </h1>
                               </div>
                          </div>
-                         <div class="grid md:grid-cols-2 p-3">
-                              <div class="rounded-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/bag1.jpg" alt="" class="aspect-[1/1] p-5 object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Wildcraft Casual Backpack
-                                        <p class="text-sm">
-                                             ₹1,609
-                                        </p>
-                                   </h1>
-                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
-                                             Cancel Order
-                                        </a>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1 class="text-nowrap">
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
-                              </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid md:grid-cols-2 p-3">
-                              <div class="rounded-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/bag1.jpg" alt="" class="aspect-[1/1] p-5 object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Wildcraft Casual Backpack
-                                        <p class="text-sm">
-                                             ₹1,609
-                                        </p>
-                                   </h1>
-                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
-                                             Cancel Order
-                                        </a>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1 class="text-nowrap">
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
-                              </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid md:grid-cols-2 p-3">
-                              <div class="rounded-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/bag1.jpg" alt="" class="aspect-[1/1] p-5 object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Wildcraft Casual Backpack
-                                        <p class="text-sm">
-                                             ₹1,609
-                                        </p>
-                                   </h1>
-                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
-                                             Cancel Order
-                                        </a>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1 class="text-nowrap">
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
-                              </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid md:grid-cols-2 p-3">
-                              <div class="rounded-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/bag1.jpg" alt="" class="aspect-[1/1] p-5 object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Wildcraft Casual Backpack
-                                        <p class="text-sm">
-                                             ₹1,609
-                                        </p>
-                                   </h1>
-                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
-                                             Cancel Order
-                                        </a>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </section>
-
-               <!-- On Check of Return -->
-               <section class="hidden peer-checked/return:grid ring-red-200 rounded-md
-               col-span-3 grid-cols-2 gap-5">
-                    <div class="grid border rounded-md text-sm shadow-lg">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1>
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
-                                   <h1>
-                                        Total Order Amount
-                                        <p>#Amount#</p>
-                                   </h1>
-                              </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
                          <div class="grid grid-cols-2 p-3">
-                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Wildcraft Casual Backpack
-                                        <p class="text-sm">
-                                             ₹1,609
-                                        </p>
-                                   </h1>
-
-                                   <div class="text-sm space-y-2 absolute bottom-2">
-                                        <h1 class=" font-bold text-[#324464]">
-                                             Delivered On
-                                             <p>05-Jan-2024</p>
-                                        </h1>
-                                        <h1 class="font-bold text-[#324464]">
-                                             Returned On
-                                             <p>10-Jan-2024</p>
-                                        </h1>
-                                   </div>
-                                   <div class="text-sm text-[#324464] space-y-2 absolute right-0 bottom-2 flex flex-col text-center">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             Buy Again
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             Write Review
-                                        </a>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="grid border rounded-md text-sm shadow-lg">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1>
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
-                                   <h1>
-                                        Total Order Amount
-                                        <p>#Amount#</p>
-                                   </h1>
-                              </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid grid-cols-2 p-3">
-                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/smartwatch2.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        boAt Xtend Smart Watch
-                                        <p class="text-sm">
-                                             ₹1,996
-                                        </p>
-                                   </h1>
-
-                                   <div class="text-sm space-y-2 absolute bottom-2">
-                                        <h1 class=" font-bold text-[#324464]">
-                                             Delivered On
-                                             <p>05-Jan-2024</p>
-                                        </h1>
-                                        <h1 class="font-bold text-[#324464]">
-                                             Returned On
-                                             <p>10-Jan-2024</p>
-                                        </h1>
-                                   </div>
-                                   <div class="text-sm text-[#324464] space-y-2 absolute right-0 bottom-2 flex flex-col text-center">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             Buy Again
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             Write Review
-                                        </a>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="grid border rounded-md text-sm shadow-lg">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1>
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
-                                   <h1>
-                                        Total Order Amount
-                                        <p>#Amount#</p>
-                                   </h1>
-                              </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid grid-cols-2 p-3">
-                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                              <div class="rounded-md hover:cursor-pointer justify-self-start">
                                    <img src="/Material/headphones.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
-                              <div class="space-y-10 relative py-3">
+                              <div class="flex flex-col gap-5 justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        SONY Headphones
+                                        Headphones from SONY
                                         <p class="text-sm">
-                                             ₹6,000
+                                             ₹12,999
                                         </p>
                                    </h1>
-
-                                   <div class="text-sm space-y-2 absolute bottom-2">
-                                        <h1 class=" font-bold text-[#324464]">
+                                   <div class="text-sm flex flex-col space-y-3">
+                                        <h1 class="font-bold text-[#324464]">
                                              Delivered On
                                              <p>05-Jan-2024</p>
                                         </h1>
@@ -380,30 +269,27 @@
                                              <p>10-Jan-2024</p>
                                         </h1>
                                    </div>
-                                   <div class="text-sm text-[#324464] space-y-2 absolute right-0 bottom-2 flex flex-col text-center">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             Buy Again
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             Write Review
-                                        </a>
-                                   </div>
+                                   
                               </div>
                          </div>
+                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end">
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                   View Product
+                              </a>
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                   Buy Again
+                              </a>
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full hidden sm:block">
+                                   Write Review
+                              </a>
+                         </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-lg">
+                    <div class="grid border rounded-md text-sm shadow-md">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
-                                   <h1>
+                                   <h1 class="text-nowrap">
                                         Order Placed On
                                         <p>#Date#</p>
-                                   </h1>
-                                   <h1>
-                                        Total Order Amount
-                                        <p>#Amount#</p>
                                    </h1>
                               </div>
                               <div class="justify-self-end">
@@ -413,56 +299,153 @@
                               </div>
                          </div>
                          <div class="grid grid-cols-2 p-3">
-                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/tshirt1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              <div class="rounded-md hover:cursor-pointer justify-self-start">
+                                   <img src="/Material/laptop.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
-                              <div class="space-y-10 relative py-3">
+                              <div class="flex flex-col gap-5 justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Lymio Men's T-Shirt
+                                        ASUS Vivobook
                                         <p class="text-sm">
-                                             ₹750
+                                             ₹58,990
                                         </p>
                                    </h1>
-
-                                   <div class="text-sm space-y-2 absolute bottom-2">
-                                        <h1 class=" font-bold text-[#324464]">
+                                   <div class="text-sm flex flex-col space-y-3">
+                                        <h1 class="font-bold text-[#324464]">
                                              Delivered On
-                                             <p>05-Jan-2024</p>
+                                             <p>10-Jan-2024</p>
                                         </h1>
                                         <h1 class="font-bold text-[#324464]">
                                              Returned On
-                                             <p>10-Jan-2024</p>
+                                             <p>20-Jan-2024</p>
                                         </h1>
                                    </div>
-                                   <div class="text-sm text-[#324464] space-y-2 absolute right-0 bottom-2 flex flex-col text-center">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             Buy Again
-                                        </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             Write Review
-                                        </a>
-                                   </div>
+                                   
                               </div>
+                         </div>
+                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end">
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                   View Product
+                              </a>
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                   Buy Again
+                              </a>
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full hidden sm:block">
+                                   Write Review
+                              </a>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-md">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1 class="text-nowrap">
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-start">
+                                   <img src="/Material/mouse.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="flex flex-col gap-5 justify-center">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        Logitech Wireless Mouse
+                                        <p class="text-sm">
+                                             ₹799
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm flex flex-col space-y-3">
+                                        <h1 class="font-bold text-[#324464]">
+                                             Delivered On
+                                             <p>25-Jan-2024</p>
+                                        </h1>
+                                        <h1 class="font-bold text-[#324464]">
+                                             Returned On
+                                             <p>01-Feb-2024</p>
+                                        </h1>
+                                   </div>
+                                   
+                              </div>
+                         </div>
+                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end">
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                   View Product
+                              </a>
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                   Buy Again
+                              </a>
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full hidden sm:block">
+                                   Write Review
+                              </a>
+                         </div>
+                    </div>
+                    <div class="grid border rounded-md text-sm shadow-md">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                              <div class="grid grid-cols-2">
+                                   <h1 class="text-nowrap">
+                                        Order Placed On
+                                        <p>#Date#</p>
+                                   </h1>
+                              </div>
+                              <div class="justify-self-end">
+                                   <h1>
+                                        <a href="" class="hover:underline">View Order Details</a>
+                                   </h1>
+                              </div>
+                         </div>
+                         <div class="grid grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-start">
+                                   <img src="/Material/shoes.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                              </div>
+                              <div class="flex flex-col gap-5 justify-center">
+                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
+                                        ANDUNE Men’s Shoes
+                                        <p class="text-sm">
+                                             ₹2,999
+                                        </p>
+                                   </h1>
+                                   <div class="text-sm flex flex-col space-y-3">
+                                        <h1 class="font-bold text-[#324464]">
+                                             Delivered On
+                                             <p>10-Feb-2024</p>
+                                        </h1>
+                                        <h1 class="font-bold text-[#324464]">
+                                             Returned On
+                                             <p>11-Feb-2024</p>
+                                        </h1>
+                                   </div>
+                                   
+                              </div>
+                         </div>
+                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end">
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                   View Product
+                              </a>
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                   Buy Again
+                              </a>
+                              <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full hidden sm:block">
+                                   Write Review
+                              </a>
                          </div>
                     </div>
                </section>
 
                <!-- On Check of Cancel -->
-               <section class="hidden peer-checked/cancel:grid ring-red-200 rounded-md
-               col-span-3 grid-cols-2 gap-5">
-                    <div class="grid border rounded-md text-sm shadow-lg">
+               <section class="hidden px-5 peer-checked/cancel:grid ring-red-200 rounded-md
+               col-span-3 lg:grid-cols-2 gap-5">
+                    <!-- Product One -->
+                    <div class="grid border rounded-md text-sm shadow-md">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
-                                   <h1>
+                                   <h1 class="text-nowrap">
                                         Order Placed On
                                         <p>#Date#</p>
-                                   </h1>
-                                   <h1>
-                                        Total Order Amount
-                                        <p>#Amount#</p>
                                    </h1>
                               </div>
                               <div class="justify-self-end">
@@ -471,20 +454,20 @@
                                    </h1>
                               </div>
                          </div>
-                         <div class="grid grid-cols-2 p-3">
-                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
+                         <div class="grid md:grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-center">
                                    <img src="/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
-                              <div class="space-y-10 relative py-3">
+                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
                                         Wildcraft Casual Backpack
                                         <p class="text-sm">
                                              ₹1,609
                                         </p>
                                    </h1>
-                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
                                         <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
+                                             View Product
                                         </a>
                                         <a href="" class="border px-3 py-2 hover:bg-[#324464] hover:text-white rounded-full">
                                              Order Again
@@ -493,16 +476,13 @@
                               </div>
                          </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-lg">
+                    <!-- Product Two -->
+                    <div class="grid border rounded-md text-sm shadow-md">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
-                                   <h1>
+                                   <h1 class="text-nowrap">
                                         Order Placed On
                                         <p>#Date#</p>
-                                   </h1>
-                                   <h1>
-                                        Total Order Amount
-                                        <p>#Amount#</p>
                                    </h1>
                               </div>
                               <div class="justify-self-end">
@@ -511,20 +491,20 @@
                                    </h1>
                               </div>
                          </div>
-                         <div class="grid grid-cols-2 p-3">
-                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                         <div class="grid md:grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-center">
+                                   <img src="/Material/shirt1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
-                              <div class="space-y-10 relative py-3">
+                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Wildcraft Casual Backpack
+                                        Casual Shirt
                                         <p class="text-sm">
-                                             ₹1,609
+                                             ₹699
                                         </p>
                                    </h1>
-                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
                                         <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
+                                             View Product
                                         </a>
                                         <a href="" class="border px-3 py-2 hover:bg-[#324464] hover:text-white rounded-full">
                                              Order Again
@@ -533,16 +513,12 @@
                               </div>
                          </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-lg">
+                    <div class="grid border rounded-md text-sm shadow-md">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
-                                   <h1>
+                                   <h1 class="text-nowrap">
                                         Order Placed On
                                         <p>#Date#</p>
-                                   </h1>
-                                   <h1>
-                                        Total Order Amount
-                                        <p>#Amount#</p>
                                    </h1>
                               </div>
                               <div class="justify-self-end">
@@ -551,20 +527,20 @@
                                    </h1>
                               </div>
                          </div>
-                         <div class="grid grid-cols-2 p-3">
-                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                         <div class="grid md:grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-start">
+                                   <img src="/Material/tablet.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
-                              <div class="space-y-10 relative py-3">
+                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Wildcraft Casual Backpack
+                                        Redmi Tablet
                                         <p class="text-sm">
-                                             ₹1,609
+                                             ₹25,999
                                         </p>
                                    </h1>
-                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
                                         <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
+                                             View Product
                                         </a>
                                         <a href="" class="border px-3 py-2 hover:bg-[#324464] hover:text-white rounded-full">
                                              Order Again
@@ -573,16 +549,12 @@
                               </div>
                          </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-lg">
+                    <div class="grid border rounded-md text-sm shadow-md">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
-                                   <h1>
+                                   <h1 class="text-nowrap">
                                         Order Placed On
                                         <p>#Date#</p>
-                                   </h1>
-                                   <h1>
-                                        Total Order Amount
-                                        <p>#Amount#</p>
                                    </h1>
                               </div>
                               <div class="justify-self-end">
@@ -591,20 +563,20 @@
                                    </h1>
                               </div>
                          </div>
-                         <div class="grid grid-cols-2 p-3">
-                              <div class="rounded-md hover:shadow-md hover:cursor-pointer justify-self-start">
-                                   <img src="/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                         <div class="grid md:grid-cols-2 p-3">
+                              <div class="rounded-md hover:cursor-pointer justify-self-start">
+                                   <img src="/Material/tshirt2.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
-                              <div class="space-y-10 relative py-3">
+                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Wildcraft Casual Backpack
+                                        Tshirt
                                         <p class="text-sm">
-                                             ₹1,609
+                                             ₹499
                                         </p>
                                    </h1>
-                                   <div class="text-sm text-[#324464] space-x-5 left-5 bottom-2 flex text-center items-center">
+                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
                                         <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Item
+                                             View Product
                                         </a>
                                         <a href="" class="border px-3 py-2 hover:bg-[#324464] hover:text-white rounded-full">
                                              Order Again
