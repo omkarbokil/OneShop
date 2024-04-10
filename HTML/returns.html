@@ -58,6 +58,18 @@
           </section>
      </nav>
      
+     <button type="button" class="text-white gap-3 absolute top-[50%] left-[44%] bg-[#324464] p-5 z-50 rounded-lg flex flex-col items-center loader hidden">
+          <span class="material-symbols-outlined animate-spin">
+               progress_activity
+          </span>
+          <h1>
+               Cancelling Your Order
+          </h1>
+          <h1>
+               Please wait...
+          </h1>
+     </button>
+
      <!-- Returns Products -->
      <section class="grid sm:p-0 sm:mx-40 my-10 place-content-center">
           <section class="grid sm:grid-cols-3 rounded-md gap-5 place-items-center">
@@ -84,7 +96,7 @@
                <section class="hidden px-5 peer-checked/order:grid ring-red-200 rounded-md
                col-span-3 lg:grid-cols-2 gap-5">
                     <!-- Product One -->
-                    <div class="grid border rounded-md text-sm shadow-md">
+                    <div class="grid border rounded-md text-sm shadow-md return-products">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
@@ -113,15 +125,15 @@
                                         <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
                                              View Product
                                         </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                        <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
                                              Cancel Order
-                                        </a>
+                                        </button>
                                    </div>
                               </div>
                          </div>
                     </div>
                     <!-- Product Two -->
-                    <div class="grid border rounded-md text-sm shadow-md">
+                    <div class="grid border rounded-md text-sm shadow-md return-products">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
@@ -150,14 +162,14 @@
                                         <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
                                              View Product
                                         </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                        <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
                                              Cancel Order
-                                        </a>
+                                        </button>
                                    </div>
                               </div>
                          </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-md">
+                    <div class="grid border rounded-md text-sm shadow-md return-products">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
@@ -186,14 +198,14 @@
                                         <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
                                              View Product
                                         </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                        <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
                                              Cancel Order
-                                        </a>
+                                        </button>
                                    </div>
                               </div>
                          </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-md">
+                    <div class="grid border rounded-md text-sm shadow-md return-products">
                          <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
@@ -222,9 +234,9 @@
                                         <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
                                              View Product
                                         </a>
-                                        <a href="" class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full">
+                                        <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
                                              Cancel Order
-                                        </a>
+                                        </button>
                                    </div>
                               </div>
                          </div>
@@ -637,6 +649,6 @@
      </footer>
 
      <!-- JS -->
-     <script src="/JS/oneshop.js"></script>
+     <script src="/JS/returns.js"></script>
 </body>
 </html>
