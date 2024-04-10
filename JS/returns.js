@@ -7,8 +7,8 @@ let loader          =    document.querySelector(".loader");
 cancelOrder.forEach((val, ind) => {
      val.addEventListener("click", () => {
           cancelOrder[ind].disabled = true;
-          loader.classList.add("bg-white/70");
           loader.classList.toggle("hidden");
+          loader.classList.add("bg-white/70");
           setTimeout(() => {
                returnProducts[ind].classList.toggle("hidden");
                loader.classList.remove("bg-white/70");

@@ -616,104 +616,12 @@ video {
   top: 6.5rem;
 }
 
-.top-0{
-  top: 0px;
-}
-
-.top-44{
-  top: 11rem;
-}
-
-.top-\[50\]{
-  top: 50;
-}
-
-.top-\[50\%\]{
-  top: 50%;
-}
-
-.left-\[50\%\]{
-  left: 50%;
-}
-
-.left-\[40\%\]{
-  left: 40%;
-}
-
-.left-\[45\%\]{
-  left: 45%;
-}
-
-.left-\[48\%\]{
-  left: 48%;
-}
-
-.left-auto{
-  left: auto;
-}
-
-.left-\[40\]{
-  left: 40;
-}
-
-.left-\[4\%\]{
-  left: 4%;
-}
-
-.left-\[44\%\]{
-  left: 44%;
-}
-
-.top-\[0\%\]{
-  top: 0%;
-}
-
-.top-48{
-  top: 12rem;
-}
-
-.top-\[12rem\]{
-  top: 12rem;
-}
-
-.top-52{
-  top: 13rem;
-}
-
-.top-60{
-  top: 15rem;
-}
-
-.top-8{
-  top: 2rem;
-}
-
-.top-80{
-  top: 20rem;
-}
-
-.left-52{
-  left: 13rem;
-}
-
-.left-80{
-  left: 20rem;
-}
-
-.left-8{
-  left: 2rem;
-}
-
-.z-50{
-  z-index: 50;
-}
-
 .z-40{
   z-index: 40;
 }
 
-.z-10{
-  z-index: 10;
+.z-50{
+  z-index: 50;
 }
 
 .col-span-2{
@@ -735,14 +643,6 @@ video {
 
 .mt-5{
   margin-top: 1.25rem;
-}
-
-.mr-3{
-  margin-right: 0.75rem;
-}
-
-.ml-10{
-  margin-left: 2.5rem;
 }
 
 .line-clamp-1{
@@ -788,12 +688,12 @@ video {
   height: auto;
 }
 
-.h-5{
-  height: 1.25rem;
-}
-
 .h-screen{
   height: 100vh;
+}
+
+.min-h-dvh{
+  min-height: 100dvh;
 }
 
 .w-24{
@@ -822,18 +722,6 @@ video {
 
 .w-screen{
   width: 100vw;
-}
-
-.w-5{
-  width: 1.25rem;
-}
-
-.w-\[\]{
-  width: ;
-}
-
-.w-\[25rem\]{
-  width: 25rem;
 }
 
 .min-w-44{
@@ -1097,11 +985,6 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.border-green-600{
-  --tw-border-opacity: 1;
-  border-color: rgb(22 163 74 / var(--tw-border-opacity));
-}
-
 .bg-\[\#324464\]{
   --tw-bg-opacity: 1;
   background-color: rgb(50 68 100 / var(--tw-bg-opacity));
@@ -1137,36 +1020,6 @@ video {
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-green-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
-.bg-indigo-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
-}
-
-.bg-\[\]{
-  background-color: ;
-}
-
-.bg-white\/10{
-  background-color: rgb(255 255 255 / 0.1);
-}
-
-.bg-white\/50{
-  background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-white\/60{
-  background-color: rgb(255 255 255 / 0.6);
-}
-
-.bg-white\/70{
-  background-color: rgb(255 255 255 / 0.7);
 }
 
 .bg-\[url\(\'\/Material\/books\.png\'\)\]{
