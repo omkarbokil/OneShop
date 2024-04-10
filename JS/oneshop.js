@@ -66,3 +66,17 @@ collapsibleMenuClose.addEventListener("click", () => {
      collapsibleMenu.style.top = "-50rem";
      // collapsibleMenuClose.classList.toggle("hidden");
 })
+
+// Add To Cart
+let addToCart = document.querySelectorAll(".add-to-cart");
+let addToCartCount = document.querySelector(".add-to-cart-count");
+let count = 0;
+
+addToCart.forEach((val) => {
+     val.addEventListener("click", ()=> {
+          count += 1;
+          console.log(count);
+          addToCartCount.innerText = count;
+          addToCartCount.classList.remove("hidden");
+     })
+})

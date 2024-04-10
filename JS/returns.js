@@ -15,7 +15,15 @@ cancelOrder.forEach((val, ind) => {
                loader.classList.toggle("hidden");
           }, 3000);
      })
-})
+});
+
+// returnProducts.forEach((val, ind) => {
+     // localStorage.setItem(ind, val);
+
+     // let s = localStorage.key(ind)
+     // console.log(s, typeof(s), typeof(ind));
+     // returnProducts[Number(s)].classList.add("bg-black");
+// })
 
 // Collapsible Menu
 let collapsibleMenuOpen = document.querySelector("#collapsible-menu-open");
