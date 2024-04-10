@@ -57,18 +57,20 @@
                </section>
           </section>
      </nav>
-     
-     <button type="button" class="text-white gap-3 absolute top-[50%] left-[44%] bg-[#324464] p-5 z-50 rounded-lg flex flex-col items-center loader hidden">
-          <span class="material-symbols-outlined animate-spin">
-               progress_activity
-          </span>
-          <h1>
-               Cancelling Your Order
-          </h1>
-          <h1>
-               Please wait...
-          </h1>
-     </button>
+
+     <div class="flex absolute w-screen h-screen items-center justify-center loader z-50 hidden">
+          <button type="button" class="text-white gap-3 bg-[#324464] p-5 rounded-lg flex flex-col items-center">
+               <span class="material-symbols-outlined animate-spin">
+                    progress_activity
+               </span>
+               <h1>
+                    Cancelling Your Order
+               </h1>
+               <h1>
+                    Please wait...
+               </h1>
+          </button>
+     </div>
 
      <!-- Returns Products -->
      <section class="grid sm:p-0 sm:mx-40 my-10 place-content-center">
