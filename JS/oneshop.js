@@ -72,11 +72,15 @@ let addToCart = document.querySelectorAll(".add-to-cart");
 let addToCartCount = document.querySelector(".add-to-cart-count");
 let count = 0;
 
-addToCart.forEach((val) => {
+addToCart.forEach((val, ind) => {
      val.addEventListener("click", ()=> {
           count += 1;
-          console.log(count);
-          addToCartCount.innerText = count;
-          addToCartCount.classList.remove("hidden");
+          localStorage.setItem(ind, count)
+          addToCartCount.innerText = localStorage.getItem(ind);
+          // addToCartCount.classList.remove("hidden");
      })
 })
+
+addToCartCount.innerText = localStorage.getItem(0);
+let p = localStorage.getItem(0);
+console.log(p);
