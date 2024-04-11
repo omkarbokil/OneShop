@@ -51,12 +51,34 @@ if(localStorage.getItem(0) > 0)
 let products = document.querySelectorAll(".products");
 let productModal = document.querySelector(".product-modal");
 let productModalClose = document.querySelector(".product-modal-close");
+
 let productModalImg = document.getElementById("product-modal-img");
+let productModalName = document.getElementById("product-modal-name");
+let productModalDiscPrice = document.getElementById("product-modal-disc-price");
+let productModalAccPrice = document.getElementById("product-modal-acc-price");
+
+let productName = document.querySelectorAll(".product-name");
+let discountedPrice = document.querySelectorAll(".discounted-price");
+let actualPrice = document.querySelectorAll(".actual-price");
 
 products.forEach((val, ind) => {
      val.addEventListener("click", () => {
+          console.log(val);
+          // Getting Values of Product Based on Index
+          let imgSource = products[ind].src;
+          let name = productName[ind].innerText;
+          let discPrice = discountedPrice[ind].innerText;
+          let accPrice = actualPrice[ind].innerText;
+
+          console.log(discPrice);
+          
+          // Setting Values
+          productModalImg.src = imgSource;
+          productModalName.innerText = name;
+          productModalDiscPrice.innerText = discPrice;
+          productModalAccPrice.innerText = accPrice;
+
           productModal.classList.toggle("hidden")
-          productModalImg.src = "/Material/airfryer.jpg";
      })
 })
 
