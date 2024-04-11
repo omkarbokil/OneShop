@@ -33,13 +33,9 @@ let navbar = document.querySelector("#navbar");
 let footer = document.querySelector("#footer");
 
 collapsibleMenuOpen.addEventListener("click", () => {
-     // collapsibleMenu.classList.toggle("hidden");
      collapsibleMenu.style.top = 0;
-     // collapsibleMenuClose.classList.toggle("hidden");
 })
 
 collapsibleMenuClose.addEventListener("click", () => {
-     // collapsibleMenu.classList.toggle("hidden");
      collapsibleMenu.style.top = "-50rem";
-     // collapsibleMenuClose.classList.toggle("hidden");
 })
