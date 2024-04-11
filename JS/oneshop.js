@@ -1,3 +1,17 @@
+// Collapsible Menu
+let collapsibleMenuOpen = document.querySelector("#collapsible-menu-open");
+let collapsibleMenuClose = document.querySelector("#collapsible-menu-close");
+let collapsibleMenu = document.querySelector("#collapsible-menu");
+let navbar = document.querySelector("#navbar");
+let footer = document.querySelector("#footer");
+
+collapsibleMenuOpen.addEventListener("click", () => {
+     collapsibleMenu.style.top = 0;
+})
+
+collapsibleMenuClose.addEventListener("click", () => {
+     collapsibleMenu.style.top = "-50rem";
+})
 
 // Items - Today's Deals
 let itemOne = document.querySelectorAll(".item-1");
@@ -13,21 +27,6 @@ itemOne.forEach((val, ind) => {
      val.addEventListener("mouseleave", () => {
           buyNow[ind].classList.add("hidden");
      })
-})
-
-// Collapsible Menu
-let collapsibleMenuOpen = document.querySelector("#collapsible-menu-open");
-let collapsibleMenuClose = document.querySelector("#collapsible-menu-close");
-let collapsibleMenu = document.querySelector("#collapsible-menu");
-let navbar = document.querySelector("#navbar");
-let footer = document.querySelector("#footer");
-
-collapsibleMenuOpen.addEventListener("click", () => {
-     collapsibleMenu.style.top = 0;
-})
-
-collapsibleMenuClose.addEventListener("click", () => {
-     collapsibleMenu.style.top = "-50rem";
 })
 
 // Add To Cart
@@ -47,3 +46,20 @@ if(localStorage.getItem(0) > 0)
 {
      addToCartCount.innerText = localStorage.getItem(0);
 }
+
+// Products
+let products = document.querySelectorAll(".products");
+let productModal = document.querySelector(".product-modal");
+let productModalClose = document.querySelector(".product-modal-close");
+let productModalImg = document.getElementById("product-modal-img");
+
+products.forEach((val, ind) => {
+     val.addEventListener("click", () => {
+          productModal.classList.toggle("hidden")
+          productModalImg.src = "/Material/airfryer.jpg";
+     })
+})
+
+productModalClose.addEventListener("click", () => {
+     productModal.classList.toggle("hidden")
+})
