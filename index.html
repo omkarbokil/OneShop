@@ -36,8 +36,12 @@
                </div>
           </section>
           <!-- Navigation Menu -->
-          <ul class=" gap-5 justify-center hidden sm:flex items-center">
-               
+          <ul class=" gap-5 justify-center hidden sm:flex items-center *:border">
+               <a><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3 border">
+                    <span class="material-symbols-outlined border">
+                         dark_mode
+                    </span>
+               </li></a>
                <a href="/index.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
                <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Offers</li></a>
                <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3 line-clamp-1  text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
@@ -317,9 +321,9 @@
                <span class="material-symbols-outlined text-black justify-self-end p-2 hover:bg-[#9fb9e6]/50 rounded-full hover:cursor-pointer transition-all product-modal-close">
                     close
                </span>
-               <section class="grid md:grid-cols-2">
+               <section class="grid md:grid-cols-2 place-items-center">
                     <div>
-                         <img src="" alt="" class="self-center object-contain aspect-square[1/1] h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff]" id="product-modal-img">
+                         <img src="" alt="" class="object-contain aspect-square[1/1] h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff]" id="product-modal-img">
                     </div>
                     <div class="grid">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] max-w-80">

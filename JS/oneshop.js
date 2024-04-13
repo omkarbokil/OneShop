@@ -63,14 +63,11 @@ let actualPrice = document.querySelectorAll(".actual-price");
 
 products.forEach((val, ind) => {
      val.addEventListener("click", () => {
-          console.log(val);
           // Getting Values of Product Based on Index
           let imgSource = products[ind].src;
           let name = productName[ind].innerText;
           let discPrice = discountedPrice[ind].innerText;
           let accPrice = actualPrice[ind].innerText;
-
-          console.log(discPrice);
           
           // Setting Values
           productModalImg.src = imgSource;

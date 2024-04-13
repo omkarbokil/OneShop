@@ -784,10 +784,6 @@ video {
   max-width: 20rem;
 }
 
-.max-w-\[60rem\]{
-  max-width: 60rem;
-}
-
 @keyframes spin{
   to{
     transform: rotate(360deg);
@@ -836,10 +832,6 @@ video {
 
 .content-end{
   align-content: flex-end;
-}
-
-.items-end{
-  align-items: flex-end;
 }
 
 .items-center{
@@ -920,10 +912,6 @@ video {
 
 .self-end{
   align-self: flex-end;
-}
-
-.self-center{
-  align-self: center;
 }
 
 .justify-self-end{
@@ -1280,11 +1268,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-9xl{
-  font-size: 8rem;
-  line-height: 1;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -1427,6 +1410,10 @@ video {
 
 .\*\:rounded-full > *{
   border-radius: 9999px;
+}
+
+.\*\:border > *{
+  border-width: 1px;
 }
 
 .\*\:px-3 > *{
