@@ -124,7 +124,7 @@
      </section>
 
      <!--Todays Deals -->
-     <section class="bg-white dark:bg-neutral-800 pt-10">
+     <section class="bg-white dark:bg-neutral-800 py-20">
           <section class="bg-[#ffffff] px-10 sm:p-0 sm:mx-40 border-green-500 dark:bg-neutral-800 dark:*:text-white">
                <section class=" pb-5 text-2xl font-bold text-[#484848] ">
                     Today's Deals
@@ -338,15 +338,15 @@
 
      <!-- Product Modal -->
      <div class="fixed top-0 bg-white/80 h-screen z-50 w-screen flex items-center hidden justify-center product-modal">
-          <section class="absolute border-2 bg-white shadow-2xl grid rounded-lg p-5 max-w-[40rem] min-w-[40rem] dark:bg-neutral-800">
+          <section class="absolute border-2 bg-white shadow-2xl grid rounded-lg p-5 max-w-[40rem] min-w-[40rem] dark:bg-neutral-800 dark:border-neutral-600">
                <span class="material-symbols-outlined text-black justify-self-end p-2 hover:bg-[#9fb9e6]/50 rounded-full hover:cursor-pointer transition-all product-modal-close dark:text-white dark:hover:bg-slate-500">
                     close
                </span>
-               <section class="grid md:grid-cols-2 place-items-center">
+               <section class="grid md:grid-cols-2 place-items-center justify-evenly">
                     <div>
-                         <img src="" alt="" class="object-contain aspect-square[1/1] h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] dark:bg-neutral-800" id="product-modal-img">
+                         <img src="" alt="" class="object-contain aspect-square[1/1] h-56 pt-5 px-10 rounded-t-lg bg-[#ffffff] dark:bg-neutral-800" id="product-modal-img">
                     </div>
-                    <div class="grid">
+                    <div class="grid place-items-center gap-5">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] max-w-80 dark:text-neutral-400">
                               <h1 class="text-[#484848] text-2xl overflow-hidden text-ellipsis text-nowrap dark:text-white" id="product-modal-name">
                                   
@@ -359,10 +359,10 @@
                               </span>
                          </div>
                          <div class="self-end text-white text-sm *:py-3 *:px-5 *:rounded-full buy-now grid gap-3">
-                              <button class="bg-[#E52E06] hover:-translate-y-1 transition-all">
+                              <button class="bg-[#E52E06] hover:scale-105 transition-all w-56">
                                    Buy Now
                               </button>
-                              <button class="bg-[#FFD814] hover:-translate-y-1 transition-all add-to-cart">
+                              <button class="bg-[#FFD814] text-black hover:scale-105 transition-all add-to-cart w-56">
                                    Add To Cart
                               </button>
                          </div>
@@ -372,7 +372,7 @@
      </div>
 
      <!-- Sale -->
-     <section class="w-screen h-auto p-10 border bg-[#9fb9e6]/20 flex items-center justify-around flex-wrap">
+     <section class="w-screen h-auto p-10 bg-[#9fb9e6]/20 flex items-center justify-around flex-wrap">
           <h1 class="font-bold space-y-5 text-[#324464]">
                <p class="text-3xl sm:text-5xl text-center">
                     Up To 80% Discount
@@ -392,97 +392,99 @@
      </section>
 
      <!-- Featured Products -->
-     <section class="grid lg:grid-cols-2 p-20 sm:p-0 sm:mx-40 my-10 gap-8 place-content-center">
-          <!-- Electronics -->
-          <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
-               <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
-                    Electronics
-               </h1>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
-                    <img src="/Material/mobile3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5">Mobile from Realme</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/tablet.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5">Tablet from Redmi</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/headphones.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5">Headphones from SONY</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/mouse.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5">Mouse from Logitech</p>
-               </div>
-          </section>
-          <!-- Home Appliances -->
-          <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
-               <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
-                    Home Appliances
-               </h1>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
-                    <img src="/Material/airfryer.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Air Fryer from Nutricook</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/sandwichmaker.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Sandwich Maker from Prestige</p>
-               </div> 
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/mixer.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Mixer Grinder from Lifelong</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/coffeemaker1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Coffee Maker from Piegon</p>
-               </div>
-          </section>
-          <!-- Clothing -->
-          <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
-               <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
-                    Clothing
-               </h1>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
-                    <img src="/Material/tshirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">T-Shirt from Lymio</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/shirt3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">T-Shirt from Lymio</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/shirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Casual Shirt from Laxeric</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/shirt4.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Casual Shirt from Lymio</p>
-               </div>
-          </section>
-          <!-- Books -->
-          <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
-               <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
-                    Books
-               </h1>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
-                    <img src="/Material/book1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Alchemist</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/book.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Power of Your Subconscious Mind</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/book2.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Atomic Habits</p>
-               </div>
-               <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                    <img src="/Material/book3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center mix-blend-color-burn group-hover:scale-110 transition-all">
-                    <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Monk Who Sold His Ferrari</p>
-               </div>
+     <section>
+          <section class="grid lg:grid-cols-2 p-20 sm:p-0 sm:mx-40 my-10 gap-8 place-content-center dark:bg-neutral-800">
+               <!-- Electronics -->
+               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
+                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+                         Electronics
+                    </h1>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
+                         <img src="/Material/mobile3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5">Mobile from Realme</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/tablet.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5">Tablet from Redmi</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/headphones.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5">Headphones from SONY</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/mouse.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5">Mouse from Logitech</p>
+                    </div>
+               </section>
+               <!-- Home Appliances -->
+               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
+                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+                         Home Appliances
+                    </h1>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
+                         <img src="/Material/airfryer.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center      mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Air Fryer from Nutricook</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/sandwichmaker.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center      mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Sandwich Maker from Prestige</p>
+                    </div> 
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/mixer.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Mixer Grinder from Lifelong</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/coffeemaker1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Coffee Maker from Piegon</p>
+                    </div>
+               </section>
+               <!-- Clothing -->
+               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
+                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+                         Clothing
+                    </h1>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
+                         <img src="/Material/tshirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">T-Shirt from Lymio</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/shirt3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">T-Shirt from Lymio</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/shirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Casual Shirt from Laxeric</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/shirt4.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Casual Shirt from Lymio</p>
+                    </div>
+               </section>
+               <!-- Books -->
+               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
+                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+                         Books
+                    </h1>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
+                         <img src="/Material/book1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Alchemist</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/book.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center     mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Power of Your Subconscious Mind</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/book2.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Atomic Habits</p>
+                    </div>
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
+                         <img src="/Material/book3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                         <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Monk Who Sold His Ferrari</p>
+                    </div>
+               </section>
           </section>
      </section>
-
+          
      <!-- Footer -->
      <footer class="h-80 border-t mt-10 hidden sm:block" id="footer">
           <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5">
