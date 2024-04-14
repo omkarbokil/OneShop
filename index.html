@@ -30,7 +30,7 @@
                </div>
                <!-- Collapsible Menu -->
                <div class="block sm:hidden">
-                    <span class="material-symbols-outlined text-[#484848] p-2 border-2 rounded-full hover:bg-black/10" role="button"   id="collapsible-menu-open">
+                    <span class="material-symbols-outlined text-[#484848] p-2 border-2 rounded-full hover:bg-black/10 dark:border-neutral-500" role="button"   id="collapsible-menu-open">
                          menu
                     </span>
                </div>
@@ -58,13 +58,25 @@
           <!-- Collapsible Menu -->
           <section class="absolute text-white -top-96 transition-all flex flex-col items-center" id="collapsible-menu">
                <ul class=" gap-5 justify-center bg-[#324464] p-8 w-screen flex flex-col flex-wrap items-center">
+                    <a class="overflow-hidden"><li class="group cursor-pointer overflow-hidden hover:bg-black/10 rounded-full py-3 px-3 flex" id="mode-switch">
+                         <div class="flex hidden" id="light-mode">
+                              <span class="material-symbols-outlined">
+                                   light_mode
+                              </span>
+                         </div>
+                         <div class="flex hidden" id="dark-mode">
+                              <span class="material-symbols-outlined">
+                                   dark_mode
+                              </span>
+                         </div>
+                    </li></a>
                     <a href=""><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Home</li></a>
                     <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Offers</li></a>
                     <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3 line-clamp-1  text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
                     <a href="/HTML/profile.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Profile</li></a>
                </ul>
                <section class="absolute -bottom-14" id="collapsible-menu-close">
-                    <span class="material-symbols-outlined p-2 bg-[#324464] text-white rounded-full">
+                    <span class="material-symbols-outlined p-2 bg-[#324464] text-white rounded-full" role="button">
                          close
                     </span>
                </section>

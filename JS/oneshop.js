@@ -85,10 +85,9 @@ productModalClose.addEventListener("click", () => {
 })
 
 // Dark Light Mode
-let modeSwitch = document.querySelector("#mode-switch");
-let darkMode = document.querySelector("#dark-mode");
-let lightMode = document.querySelector("#light-mode");
-// localStorage.setItem("darklight", darkOrLight);
+let modeSwitch = document.querySelectorAll("#mode-switch");
+let darkMode = document.querySelectorAll("#dark-mode");
+let lightMode = document.querySelectorAll("#light-mode");
 
 let getMode = localStorage.getItem("darklight");
 if(getMode == null){
@@ -99,29 +98,100 @@ if(getMode == null){
 getMode = localStorage.getItem("darklight");
 
 if(getMode == 1){
-     lightMode.classList.toggle("hidden");
+     lightMode.forEach((val) => {
+          val.classList.toggle("hidden");
+     })
      body[0].classList.remove("dark");
 }
 else{
-     darkMode.classList.toggle("hidden");
+     darkMode.forEach((val) => {
+          val.classList.toggle("hidden");
+     })
      body[0].classList.add("dark");
 }
 
-modeSwitch.addEventListener("click", () => {
-     if(localStorage.getItem("darklight") == 1){
-          darkMode.classList.toggle("hidden");
-          darkMode.classList.add("animate-mode");
-          lightMode.classList.remove("animate-mode");
-          lightMode.classList.toggle("hidden");
-          localStorage.setItem("darklight", 2);
-          body[0].classList.toggle("dark");
-     }
-     else{
-          lightMode.classList.toggle("hidden");
-          lightMode.classList.add("animate-mode");
-          darkMode.classList.remove("animate-mode");
-          darkMode.classList.toggle("hidden");
-          localStorage.setItem("darklight", 1);
-          body[0].classList.toggle("dark");
-     }
+modeSwitch.forEach((val, ind) => {
+     val.addEventListener("click", () => {
+          if(localStorage.getItem("darklight") == 1){
+               darkMode[ind].classList.toggle("hidden");
+               darkMode[ind].classList.add("animate-mode");
+               lightMode[ind].classList.remove("animate-mode");
+               lightMode[ind].classList.toggle("hidden");
+               localStorage.setItem("darklight", 2);
+               body[0].classList.toggle("dark");
+          }
+          else{
+               lightMode[ind].classList.toggle("hidden");
+               lightMode[ind].classList.add("animate-mode");
+               darkMode[ind].classList.remove("animate-mode");
+               darkMode[ind].classList.toggle("hidden");
+               localStorage.setItem("darklight", 1);
+               body[0].classList.toggle("dark");
+          }
+     })
 })
+
+// modeSwitch.addEventListener("click", () => {
+//      if(localStorage.getItem("darklight") == 1){
+//           darkMode.classList.toggle("hidden");
+//           darkMode.classList.add("animate-mode");
+//           lightMode.classList.remove("animate-mode");
+//           lightMode.classList.toggle("hidden");
+//           localStorage.setItem("darklight", 2);
+//           body[0].classList.toggle("dark");
+//      }
+//      else{
+//           lightMode.classList.toggle("hidden");
+//           lightMode.classList.add("animate-mode");
+//           darkMode.classList.remove("animate-mode");
+//           darkMode.classList.toggle("hidden");
+//           localStorage.setItem("darklight", 1);
+//           body[0].classList.toggle("dark");
+//      }
+// })
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+// let modeSwitch = document.querySelector("#mode-switch");
+// let darkMode = document.querySelector("#dark-mode");
+// let lightMode = document.querySelector("#light-mode");
+
+// let getMode = localStorage.getItem("darklight");
+// if(getMode == null){
+//      let darkOrLight = 1;
+//      localStorage.setItem("darklight", darkOrLight);
+// }
+
+// getMode = localStorage.getItem("darklight");
+
+// if(getMode == 1){
+//      lightMode.classList.toggle("hidden");
+//      body[0].classList.remove("dark");
+// }
+// else{
+//      darkMode.classList.toggle("hidden");
+//      body[0].classList.add("dark");
+// }
+
+// modeSwitch.addEventListener("click", () => {
+//      if(localStorage.getItem("darklight") == 1){
+//           darkMode.classList.toggle("hidden");
+//           darkMode.classList.add("animate-mode");
+//           lightMode.classList.remove("animate-mode");
+//           lightMode.classList.toggle("hidden");
+//           localStorage.setItem("darklight", 2);
+//           body[0].classList.toggle("dark");
+//      }
+//      else{
+//           lightMode.classList.toggle("hidden");
+//           lightMode.classList.add("animate-mode");
+//           darkMode.classList.remove("animate-mode");
+//           darkMode.classList.toggle("hidden");
+//           localStorage.setItem("darklight", 1);
+//           body[0].classList.toggle("dark");
+//      }
+// })
