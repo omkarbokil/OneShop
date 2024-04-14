@@ -636,13 +636,13 @@ video {
   grid-column: span 3 / span 3;
 }
 
+.m-5{
+  margin: 1.25rem;
+}
+
 .my-10{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.me-auto{
-  margin-inline-end: auto;
 }
 
 .mt-10{
@@ -794,20 +794,6 @@ video {
   animation: spin 1s linear infinite;
 }
 
-@keyframes mode{
-  0%{
-    transform: translateY(50px);
-  }
-
-  100%{
-    transform: translateX(0px);
-  }
-}
-
-.animate-mode{
-  animation: mode 0.5s 1;
-}
-
 .cursor-pointer{
   cursor: pointer;
 }
@@ -870,6 +856,10 @@ video {
 
 .justify-evenly{
   justify-content: space-evenly;
+}
+
+.gap-10{
+  gap: 2.5rem;
 }
 
 .gap-2{
@@ -1109,26 +1099,10 @@ video {
   background-image: url('/Material/summercollection.png');
 }
 
-.from-\[\#193350\]{
-  --tw-gradient-from: #193350 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(25 51 80 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-\[\#324464\]{
   --tw-gradient-from: #324464 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(50 68 100 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-\[\#1d3552\]{
-  --tw-gradient-from: #1d3552 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(29 53 82 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-neutral-800{
-  --tw-gradient-to: #262626 var(--tw-gradient-to-position);
 }
 
 .bg-contain{
@@ -1705,10 +1679,6 @@ video {
 
 .dark\:bg-transparent:is(.dark *){
   background-color: transparent;
-}
-
-.dark\:bg-gradient-to-bl:is(.dark *){
-  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
 }
 
 .dark\:text-\[\#4364a2\]:is(.dark *){
