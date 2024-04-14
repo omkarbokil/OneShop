@@ -17,15 +17,15 @@ module.exports = {
       },
 
       animation: {
-        'mode': 'mode 1s linear infinite'
+        'mode': 'mode 0.5s 1'
       },
 
       keyframes: {
         'mode':{
-          '0%, 100%':{
-            transform : 'translateY(10px)'
+          '0%':{
+            transform : 'translateY(50px)'
           },
-          '50%':{
+          '100%':{
             transform : 'translateX(0px)'
           }
         }

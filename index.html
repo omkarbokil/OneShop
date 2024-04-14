@@ -37,10 +37,17 @@
           </section>
           <!-- Navigation Menu -->
           <ul class="gap-5 justify-center hidden sm:flex items-center">
-               <a class="overflow-hidden border"><li class="group cursor-pointer hover:bg-black/10 rounded-full py-3 px-3 flex" id="mode-switch">
-                    <span class="material-symbols-outlined" id="dark-light-mode">
-                         light_mode
-                    </span>
+               <a class="overflow-hidden"><li class="group cursor-pointer overflow-hidden hover:bg-black/10 rounded-full py-3 px-3 flex" id="mode-switch">
+                    <div class="flex" id="light-mode">
+                         <span class="material-symbols-outlined">
+                              light_mode
+                         </span>
+                    </div>
+                    <div class="flex hidden" id="dark-mode">
+                         <span class="material-symbols-outlined">
+                              dark_mode
+                         </span>
+                    </div>
                </li></a>
                <a href="/index.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
                <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Offers</li></a>
