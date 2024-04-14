@@ -794,6 +794,20 @@ video {
   animation: spin 1s linear infinite;
 }
 
+@keyframes mode{
+  0%{
+    transform: translateY(50px);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+.animate-mode{
+  animation: mode 0.5s 1;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
