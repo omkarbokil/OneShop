@@ -17,23 +17,17 @@ module.exports = {
       },
 
       animation: {
-        nav: 'nav 0.5s ease-in forwards',
+        'mode': 'mode 1s linear infinite'
       },
 
       keyframes: {
-        nav: {
-          '0%': {
-              left:'0',
-              width:'0'
-            },
-            '50%': {
-              left:'0',
-              width:'100%'
-            },
-            '100%': {
-              left:'0',
-              width:'100%'
-            }
+        'mode':{
+          '0%, 100%':{
+            transform : 'translateY(10px)'
+          },
+          '50%':{
+            transform : 'translateX(0px)'
+          }
         }
       }
     },

@@ -82,3 +82,20 @@ products.forEach((val, ind) => {
 productModalClose.addEventListener("click", () => {
      productModal.classList.toggle("hidden")
 })
+
+// Drak Light Mode
+let modeSwitch = document.querySelector("#mode-switch");
+let darkLightMode = document.querySelector("#dark-light-mode");
+let darkOrLight = 1;
+
+modeSwitch.addEventListener("click", () => {
+     if(darkOrLight == 1){
+          darkLightMode.innerText = "dark_mode";
+          darkLightMode.classList.add("animate-mode");
+          darkOrLight = 2;
+     }
+     else{
+          darkLightMode.innerText = "light_mode";
+          darkOrLight = 1;
+     }
+})
