@@ -4,6 +4,7 @@ let collapsibleMenuClose = document.querySelector("#collapsible-menu-close");
 let collapsibleMenu = document.querySelector("#collapsible-menu");
 let navbar = document.querySelector("#navbar");
 let footer = document.querySelector("#footer");
+let body = document.getElementsByTagName("body");
 
 collapsibleMenuOpen.addEventListener("click", () => {
      collapsibleMenu.style.top = 0;
@@ -95,9 +96,15 @@ if(getMode == null){
      localStorage.setItem("darklight", darkOrLight);
 }
 
+getMode = localStorage.getItem("darklight");
+
 if(getMode == 1){
-     darkMode.classList.toggle("hidden");
      lightMode.classList.toggle("hidden");
+     body[0].classList.remove("dark");
+}
+else{
+     darkMode.classList.toggle("hidden");
+     body[0].classList.add("dark");
 }
 
 modeSwitch.addEventListener("click", () => {
@@ -107,6 +114,7 @@ modeSwitch.addEventListener("click", () => {
           lightMode.classList.remove("animate-mode");
           lightMode.classList.toggle("hidden");
           localStorage.setItem("darklight", 2);
+          body[0].classList.toggle("dark");
      }
      else{
           lightMode.classList.toggle("hidden");
@@ -114,7 +122,6 @@ modeSwitch.addEventListener("click", () => {
           darkMode.classList.remove("animate-mode");
           darkMode.classList.toggle("hidden");
           localStorage.setItem("darklight", 1);
+          body[0].classList.toggle("dark");
      }
 })
-
-// Enabling Drak Mode

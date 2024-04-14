@@ -9,12 +9,12 @@
      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-<body class="overflow-x-hidden font-figtree">
-     <nav class="bg-[#ffffff] flex flex-col md:flex-row items-center gap-3 p-5 sticky top-[0.1px] shadow-md z-50" id="navbar">
+<body class="overflow-x-hidden font-figtree dark">
+     <nav class="bg-[#ffffff] dark:bg-neutral-800 dark:text-white flex flex-col md:flex-row items-center gap-3 p-5 sticky top-[0.1px] shadow-md z-50" id="navbar">
           <!-- Logo -->
           <section class="w-40 text-center hidden md:block">
-               <h1 class="text-xl font-extrabold tracking-wider">
-                    <span class="text-[#324464]">O</span>NE <span class="text-[#324464]">S</span>HOP
+               <h1 class="text-xl font-extrabold tracking-wider logo-name">
+                    <span class="text-[#324464] dark:text-white">O</span>NE <span class="text-[#324464] dark:text-white">S</span>HOP
                </h1>
                <h2 class="text-sm tracking-wider text-nowrap">
                     shop all at one stop
@@ -22,11 +22,11 @@
           </section>
           <!-- Search Bar -->
           <section class="w-[100%] flex items-center gap-2 justify-center">
-               <div class="flex items-center border-2 rounded-lg min-w-[80%]">
-                    <span class="material-symbols-outlined text-[#484848] p-2">
+               <div class="flex items-center border-2 rounded-lg min-w-[80%] dark:border-neutral-500">
+                    <span class="material-symbols-outlined text-[#484848] p-2 dark:text-neutral-500">
                          search
                     </span>
-                    <input type="search" placeholder="Serach" class="w-[100%] p-2 rounded-lg outline-none placeholder:italic placeholder:text-slate-400">
+                    <input type="search" placeholder="Serach" class="w-[100%] p-2 rounded-lg outline-none placeholder:italic placeholder:text-slate-400 dark:bg-neutral-800">
                </div>
                <!-- Collapsible Menu -->
                <div class="block sm:hidden">
@@ -38,7 +38,7 @@
           <!-- Navigation Menu -->
           <ul class="gap-5 justify-center hidden sm:flex items-center">
                <a class="overflow-hidden"><li class="group cursor-pointer overflow-hidden hover:bg-black/10 rounded-full py-3 px-3 flex" id="mode-switch">
-                    <div class="flex" id="light-mode">
+                    <div class="flex hidden" id="light-mode">
                          <span class="material-symbols-outlined">
                               light_mode
                          </span>
@@ -83,29 +83,29 @@
      </li></a>
 
      <!-- Banner Images -->
-     <section class="bg-[#ffffff]">
-          <section class="flex px-5 py-10 overflow-auto gap-5 flex-nowrap">
+     <section class="bg-[#ffffff] dark:bg-neutral-800">
+          <section class="flex px-5 py-10 overflow-auto gap-5 flex-nowrap dark:*:border-neutral-700">
                <div class="border p-5 rounded-md flex items-center justify-start md:justify-center shadow-xl gap-4 min-w-[20rem] md:min-w-[60rem]">
-                    <img src="/Material/shirt.jpg" alt="" class="w-24 md:w-60">
+                    <img src="/Material/shirt.png" alt="" class="w-24 md:w-60">
                     <h1 class="space-y-4">
-                         <p class="text-2xl md:text-8xl font-bold text-[#324464]">Kapde</p>
-                         <span class="text-2xl md:text-7xl font-bold text-[#324464]">lene hain ?</span>
+                         <p class="text-2xl md:text-8xl font-bold text-[#324464] dark:text-[#4364a2]">Kapde</p>
+                         <span class="text-2xl md:text-7xl font-bold text-[#324464] dark:text-[#4364a2]">lene hain ?</span>
                          <p class="text-1xl md:text-5xl font-bold text-[#9fb9e6]">Aajao boss, dikha denge</p>
                     </h1>
                </div>
                <div class="border p-5 rounded-md flex items-center justify-start md:justify-center shadow-xl gap-4 min-w-[20rem] md:min-w-[60rem]">
-                    <img src="/Material/camera.jpg" alt="" class="w-24 md:w-80">
+                    <img src="/Material/camera.png" alt="" class="w-24 md:w-80">
                     <h1 class="space-y-4">
-                         <p class="text-3xl md:text-8xl font-bold text-[#324464]">Cameraman</p>
+                         <p class="text-3xl md:text-8xl font-bold text-[#324464] dark:text-[#4364a2]">Cameraman</p>
                          <p class="text-1xl md:text-5xl font-bold text-[#9fb9e6]">Jaldi focus karo !!</p>
                          <p class="text-1xl md:text-5xl font-bold text-[#9fb9e6] hidden md:block">Jaldi focus karo !!</p>
                          <p class="text-1xl md:text-5xl font-bold text-[#9fb9e6] hidden md:block">Jaldi focus karo !!</p>
                     </h1>
                </div>
                <div class="border p-5 rounded-md flex items-center justify-start md:justify-center shadow-xl gap-4 min-w-[20rem] md:min-w-[60rem]">
-                    <img src="/Material/chair.jpg" alt="" class="w-24 md:w-80">
+                    <img src="/Material/chair.png" alt="" class="w-24 md:w-80">
                     <h1 class="space-y-4">
-                         <p class="text-3xl md:text-9xl font-bold text-[#324464]">Areyy</p>
+                         <p class="text-3xl md:text-9xl font-bold text-[#324464] dark:text-[#4364a2]">Areyy</p>
                          <p class="text-1xl md:text-6xl font-bold text-[#9fb9e6]">bohot jagah hain</p>
                     </h1>
           </section>
