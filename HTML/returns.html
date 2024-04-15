@@ -9,11 +9,11 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body class="overflow-x-hidden font-figtree">
-     <nav class="bg-[#ffffff] flex flex-col md:flex-row items-center gap-3 p-5 sticky top-[0.1px] shadow-md z-50" id="navbar">
+     <nav class="bg-[#ffffff] dark:bg-neutral-800 dark:text-white flex flex-col md:flex-row items-center gap-3 p-5 sticky top-[0.1px] shadow-md z-50" id="navbar">
           <!-- Logo -->
           <section class="w-40 text-center hidden md:block">
-               <h1 class="text-xl font-extrabold tracking-wider">
-                    <span class="text-[#324464]">O</span>NE <span class="text-[#324464]">S</span>HOP
+               <h1 class="text-xl font-extrabold tracking-wider logo-name">
+                    <span class="text-[#324464] dark:text-white">O</span>NE <span class="text-[#324464] dark:text-white">S</span>HOP
                </h1>
                <h2 class="text-sm tracking-wider text-nowrap">
                     shop all at one stop
@@ -21,21 +21,33 @@
           </section>
           <!-- Search Bar -->
           <section class="w-[100%] flex items-center gap-2 justify-center">
-               <div class="flex items-center border-2 rounded-lg min-w-[80%]">
-                    <span class="material-symbols-outlined text-[#484848] p-2">
+               <div class="flex items-center border-2 rounded-lg min-w-[80%] dark:border-neutral-500">
+                    <span class="material-symbols-outlined text-[#484848] p-2 dark:text-neutral-500">
                          search
                     </span>
-                    <input type="search" placeholder="Serach" class="w-[100%] p-2 rounded-lg outline-none placeholder:italic      placeholder:text-slate-400">
+                    <input type="search" placeholder="Serach" class="w-[100%] p-2 rounded-lg outline-none placeholder:italic placeholder:text-slate-400 dark:bg-neutral-800">
                </div>
                <!-- Collapsible Menu -->
                <div class="block sm:hidden">
-                    <span class="material-symbols-outlined text-[#484848] p-2 border-2 rounded-full hover:bg-black/10" role="button"   id="collapsible-menu-open">
+                    <span class="material-symbols-outlined text-[#484848] p-2 border-2 rounded-full hover:bg-black/10 dark:border-neutral-500" role="button"   id="collapsible-menu-open">
                          menu
                     </span>
                </div>
           </section>
           <!-- Navigation Menu -->
-          <ul class=" gap-5 justify-center hidden sm:flex">
+          <ul class="gap-5 justify-center hidden sm:flex items-center">
+               <a class="overflow-hidden"><li class="group cursor-pointer overflow-hidden hover:bg-black/10 rounded-full py-3 px-3 flex" id="mode-switch">
+                    <div class="flex hidden" id="light-mode">
+                         <span class="material-symbols-outlined">
+                              light_mode
+                         </span>
+                    </div>
+                    <div class="flex hidden" id="dark-mode">
+                         <span class="material-symbols-outlined">
+                              dark_mode
+                         </span>
+                    </div>
+               </li></a>
                <a href="/index.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Home</li></a>
                <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3">Offers</li></a>
                <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-black/10 rounded-full py-1 px-3 line-clamp-1  text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
@@ -45,13 +57,25 @@
           <!-- Collapsible Menu -->
           <section class="absolute text-white -top-96 transition-all flex flex-col items-center" id="collapsible-menu">
                <ul class=" gap-5 justify-center bg-[#324464] p-8 w-screen flex flex-col flex-wrap items-center">
-                    <a href="/index.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Home</li></a>
+                    <a class="overflow-hidden"><li class="group cursor-pointer overflow-hidden hover:bg-black/10 rounded-full py-3 px-3 flex" id="mode-switch">
+                         <div class="flex hidden animate-mode" id="light-mode">
+                              <span class="material-symbols-outlined">
+                                   light_mode
+                              </span>
+                         </div>
+                         <div class="flex hidden" id="dark-mode">
+                              <span class="material-symbols-outlined">
+                                   dark_mode
+                              </span>
+                         </div>
+                    </li></a>
+                    <a href=""><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Home</li></a>
                     <a href="/HTML/offers.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Offers</li></a>
                     <a href="/HTML/returns.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3 line-clamp-1  text-ellipsis overflow-hidden text-nowrap">Returns & Orders</li></a>
                     <a href="/HTML/profile.html"><li class="cursor-pointer hover:bg-white/10 rounded-full py-1 px-3">Profile</li></a>
                </ul>
                <section class="absolute -bottom-14" id="collapsible-menu-close">
-                    <span class="material-symbols-outlined p-2 bg-[#324464] text-white rounded-full">
+                    <span class="material-symbols-outlined p-2 bg-[#324464] text-white rounded-full" role="button">
                          close
                     </span>
                </section>
@@ -73,183 +97,183 @@
      </div>
 
      <!-- Returns Products -->
-     <section class="grid sm:p-0 sm:mx-40 my-10 place-content-center">
-          <section class="grid sm:grid-cols-3 rounded-md gap-5 place-items-center">
+     <section class="dark:bg-neutral-800 py-10">
+          <section class="grid px-10 sm:p-0 sm:mx-40 place-content-center">
+               <section class="grid sm:grid-cols-3 rounded-md gap-5 place-items-center dark:*:text-white">
 
-               <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
-               <label for="order" class="font-bold text-md md:text-xl text-[#324464]
-               peer-checked/order:border-b-[3px] border-[#324464] hover:cursor-pointer">
-                    Orders
-               </label>
+                    <input type="radio" id="order" name="orders" class="peer/order hidden" >
+                    <label for="order" class="font-bold text-md md:text-xl text-[#324464]
+                    peer-checked/order:border-b-[3px] border-[#324464] hover:cursor-pointer">
+                         Orders
+                    </label>
 
-               <input type="radio" id="return" name="orders" class="peer/return hidden">
-               <label for="return" class="font-bold text-md md:text-xl text-[#324464]
-               peer-checked/return:border-b-[3px] border-[#E52E06] hover:cursor-pointer">
-                    Returns
-               </label>
+                    <input type="radio" id="return" name="orders" class="peer/return hidden" checked>
+                    <label for="return" class="font-bold text-md md:text-xl text-[#324464]
+                    peer-checked/return:border-b-[3px] border-[#E52E06] hover:cursor-pointer">
+                         Returns
+                    </label>
 
-               <input type="radio" id="cancel" name="orders" class="peer/cancel hidden">
-               <label for="cancel" class="font-bold text-md md:text-xl text-[#324464]
-               peer-checked/cancel:border-b-[3px] border-[#ffea4b] hover:cursor-pointer">
-                    Cancelled
-               </label>
+                    <input type="radio" id="cancel" name="orders" class="peer/cancel hidden">
+                    <label for="cancel" class="font-bold text-md md:text-xl text-[#324464]
+                    peer-checked/cancel:border-b-[3px] border-[#ffea4b] hover:cursor-pointer">
+                         Cancelled
+                    </label>
 
-               <!-- On Check of Orders -->
-               <section class="hidden px-5 peer-checked/order:grid ring-red-200 rounded-md
-               col-span-3 lg:grid-cols-2 gap-5">
-                    <!-- Product One -->
-                    <div class="grid border rounded-md text-sm shadow-md return-products">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1 class="text-nowrap">
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
+                    <!-- On Check of Orders -->
+                    <section class="hidden px-5 peer-checked/order:grid ring-red-200 rounded-md col-span-3 lg:grid-cols-2 gap-5 dark:*:border-neutral-600 dark:*:text-white">
+                         <!-- Product One -->
+                         <div class="grid border rounded-md text-sm shadow-md return-products dark:*:bg-[#9fb9e6]/10">
+                              <div class="grid grid-cols-2 p-3 bg-slate-100 border-b rounded-t-md border-gray-200 items-center dark:bg-neutral-800 dark:border-b-neutral-600">
+                                   <div class="grid grid-cols-2">
+                                        <h1 class="text-nowrap">
+                                             Order Placed On
+                                             <p>#Date#</p>
+                                        </h1>
+                                   </div>
+                                   <div class="justify-self-end">
+                                        <h1>
+                                             <a href="" class="hover:underline">View Order Details</a>
+                                        </h1>
+                                   </div>
                               </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid md:grid-cols-2 p-3">
-                              <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/smartwatch1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        beatXP Marv Raze
-                                        <p class="text-sm">
-                                             ₹1,099
-                                        </p>
-                                   </h1>
-                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Product
-                                        </a>
-                                        <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
-                                             Cancel Order
-                                        </button>
+                              <div class="grid md:grid-cols-2 p-3">
+                                   <div class="rounded-md hover:cursor-pointer justify-self-center">
+                                        <img src="/Material/smartwatch1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   </div>
+                                   <div class="space-y-10 relative py-3 flex-col flex justify-center">
+                                        <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464] dark:text-white">
+                                             beatXP Marv Raze
+                                             <p class="text-sm">
+                                                  ₹1,099
+                                             </p>
+                                        </h1>
+                                        <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3 
+                                        dark:text-white dark:*:border-neutral-600">
+                                             <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                                  View Product
+                                             </a>
+                                             <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
+                                                  Cancel Order
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
-                    </div>
-                    <!-- Product Two -->
-                    <div class="grid border rounded-md text-sm shadow-md return-products">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1 class="text-nowrap">
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
+                         <!-- Product Two -->
+                         <div class="grid border rounded-md text-sm shadow-md return-products dark:*:bg-[#9fb9e6]/10">
+                              <div class="grid grid-cols-2 p-3 bg-slate-100 rounded-t-md border-b border-gray-200 items-center dark:bg-neutral-800 dark:border-b-neutral-600">
+                                   <div class="grid grid-cols-2">
+                                        <h1 class="text-nowrap">
+                                             Order Placed On
+                                             <p>#Date#</p>
+                                        </h1>
+                                   </div>
+                                   <div class="justify-self-end">
+                                        <h1>
+                                             <a href="" class="hover:underline">View Order Details</a>
+                                        </h1>
+                                   </div>
                               </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid md:grid-cols-2 p-3">
-                              <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/smartwatch2.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        boAt Xtend Smart Watch
-                                        <p class="text-sm">
-                                             ₹3,500
-                                        </p>
-                                   </h1>
-                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Product
-                                        </a>
-                                        <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
-                                             Cancel Order
-                                        </button>
+                              <div class="grid md:grid-cols-2 p-3">
+                                   <div class="rounded-md hover:cursor-pointer justify-self-center">
+                                        <img src="/Material/smartwatch2.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   </div>
+                                   <div class="space-y-10 relative py-3 flex-col flex justify-center">
+                                        <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464] dark:text-white">
+                                             boAt Xtend Smart Watch
+                                             <p class="text-sm">
+                                                  ₹3,500
+                                             </p>
+                                        </h1>
+                                        <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3 dark:text-white dark:*:border-neutral-600">
+                                             <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                                  View Product
+                                             </a>
+                                             <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
+                                                  Cancel Order
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
-                    </div>
-                    <div class="grid border rounded-md text-sm shadow-md return-products">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1 class="text-nowrap">
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
+                         <div class="grid border rounded-md text-sm shadow-md return-products dark:*:bg-[#9fb9e6]/10">
+                              <div class="grid grid-cols-2 p-3 bg-slate-100 rounded-t-md border-b border-gray-200 items-center dark:bg-neutral-800 dark:border-b-neutral-600">
+                                   <div class="grid grid-cols-2">
+                                        <h1 class="text-nowrap">
+                                             Order Placed On
+                                             <p>#Date#</p>
+                                        </h1>
+                                   </div>
+                                   <div class="justify-self-end">
+                                        <h1>
+                                             <a href="" class="hover:underline">View Order Details</a>
+                                        </h1>
+                                   </div>
                               </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid md:grid-cols-2 p-3">
-                              <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/mobile3.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        HONOR 90
-                                        <p class="text-sm">
-                                             ₹20,000
-                                        </p>
-                                   </h1>
-                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Product
-                                        </a>
-                                        <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
-                                             Cancel Order
-                                        </button>
+                              <div class="grid md:grid-cols-2 p-3">
+                                   <div class="rounded-md hover:cursor-pointer justify-self-center">
+                                        <img src="/Material/mobile3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   </div>
+                                   <div class="space-y-10 relative py-3 flex-col flex justify-center">
+                                        <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464] dark:text-white">
+                                             HONOR 90
+                                             <p class="text-sm">
+                                                  ₹20,000
+                                             </p>
+                                        </h1>
+                                        <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3 dark:text-white dark:*:border-neutral-600">
+                                             <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                                  View Product
+                                             </a>
+                                             <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
+                                                  Cancel Order
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
-                    </div>
-                    <div class="grid border rounded-md text-sm shadow-md return-products">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
-                              <div class="grid grid-cols-2">
-                                   <h1 class="text-nowrap">
-                                        Order Placed On
-                                        <p>#Date#</p>
-                                   </h1>
+                         <div class="grid border rounded-md text-sm shadow-md return-products dark:*:bg-[#9fb9e6]/10">
+                              <div class="grid grid-cols-2 p-3 bg-slate-100 rounded-t-md border-b border-gray-200 items-center dark:bg-neutral-800 dark:border-b-neutral-600">
+                                   <div class="grid grid-cols-2">
+                                        <h1 class="text-nowrap">
+                                             Order Placed On
+                                             <p>#Date#</p>
+                                        </h1>
+                                   </div>
+                                   <div class="justify-self-end">
+                                        <h1>
+                                             <a href="" class="hover:underline">View Order Details</a>
+                                        </h1>
+                                   </div>
                               </div>
-                              <div class="justify-self-end">
-                                   <h1>
-                                        <a href="" class="hover:underline">View Order Details</a>
-                                   </h1>
-                              </div>
-                         </div>
-                         <div class="grid md:grid-cols-2 p-3">
-                              <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/books.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
-                              </div>
-                              <div class="space-y-10 relative py-3 flex-col flex justify-center">
-                                   <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
-                                        Books Combo
-                                        <p class="text-sm">
-                                             ₹999
-                                        </p>
-                                   </h1>
-                                   <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3">
-                                        <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
-                                             View Product
-                                        </a>
-                                        <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
-                                             Cancel Order
-                                        </button>
+                              <div class="grid md:grid-cols-2 p-3">
+                                   <div class="rounded-md hover:cursor-pointer justify-self-center">
+                                        <img src="/Material/books.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   </div>
+                                   <div class="space-y-10 relative py-3 flex-col flex justify-center">
+                                        <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464] dark:text-white">
+                                             Books Combo
+                                             <p class="text-sm">
+                                                  ₹999
+                                             </p>
+                                        </h1>
+                                        <div class="text-sm text-[#324464] bottom-2 flex flex-col text-center gap-3 dark:text-white dark:*:border-neutral-600">
+                                             <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
+                                                  View Product
+                                             </a>
+                                             <button class="border px-3 py-2 hover:bg-[#E52E06] hover:text-white rounded-full cancel-order">
+                                                  Cancel Order
+                                             </button>
+                                        </div>
                                    </div>
                               </div>
                          </div>
-                    </div>
-               </section>
+                    </section>
 
-               <!-- On Check of Return -->
-               <section class="hidden px-5 peer-checked/return:grid ring-red-200 rounded-md
-               col-span-3 lg:grid-cols-2 gap-5">
-                    <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                    <!-- On Check of Return -->
+                    <section class="hidden px-5 peer-checked/return:grid ring-red-200 rounded-md col-span-3 lg:grid-cols-2 gap-5 dark:*:border-neutral-600 dark:*:text-white">
+                    <div class="grid border rounded-md text-sm shadow-md dark:*:bg-[#9fb9e6]/10">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b rounded-t-md border-gray-200 items-center dark:border-b-neutral-600">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
                                         Order Placed On
@@ -264,16 +288,16 @@
                          </div>
                          <div class="grid grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/headphones.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/headphones.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
-                              <div class="flex flex-col gap-5 justify-center">
+                              <div class="flex flex-col gap-5 justify-center dark:*:text-white">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
                                         Headphones from SONY
                                         <p class="text-sm">
                                              ₹12,999
                                         </p>
                                    </h1>
-                                   <div class="text-sm flex flex-col space-y-3">
+                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white">
                                         <h1 class="font-bold text-[#324464]">
                                              Delivered On
                                              <p>05-Jan-2024</p>
@@ -286,7 +310,7 @@
                                    
                               </div>
                          </div>
-                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end">
+                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end dark:*:border-neutral-600 dark:*:text-white">
                               <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
                                    View Product
                               </a>
@@ -298,8 +322,8 @@
                               </a>
                          </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                    <div class="grid border rounded-md text-sm shadow-md dark:*:bg-[#9fb9e6]/10">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
                                         Order Placed On
@@ -314,7 +338,7 @@
                          </div>
                          <div class="grid grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/laptop.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/laptop.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="flex flex-col gap-5 justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -336,7 +360,7 @@
                                    
                               </div>
                          </div>
-                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end">
+                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end dark:*:border-neutral-600 dark:*:text-white">
                               <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
                                    View Product
                               </a>
@@ -348,8 +372,8 @@
                               </a>
                          </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                    <div class="grid border rounded-md text-sm shadow-md dark:*:bg-[#9fb9e6]/10">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
                                         Order Placed On
@@ -364,7 +388,7 @@
                          </div>
                          <div class="grid grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/mouse.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/mouse.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="flex flex-col gap-5 justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -386,7 +410,7 @@
                                    
                               </div>
                          </div>
-                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end">
+                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end dark:*:border-neutral-600 dark:*:text-white">
                               <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
                                    View Product
                               </a>
@@ -398,8 +422,8 @@
                               </a>
                          </div>
                     </div>
-                    <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                    <div class="grid border rounded-md text-sm shadow-md dark:*:bg-[#9fb9e6]/10">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
                                         Order Placed On
@@ -414,7 +438,7 @@
                          </div>
                          <div class="grid grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/shoes.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/shoes.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="flex flex-col gap-5 justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -436,7 +460,7 @@
                                    
                               </div>
                          </div>
-                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end">
+                         <div class="text-sm text-[#324464] flex gap-3 text-center pb-3 px-3 justify-end dark:*:border-neutral-600 dark:*:text-white">
                               <a href="" class="border px-3 py-2 hover:bg-black/10 rounded-full">
                                    View Product
                               </a>
@@ -448,14 +472,14 @@
                               </a>
                          </div>
                     </div>
-               </section>
+                    </section>
 
-               <!-- On Check of Cancel -->
-               <section class="hidden px-5 peer-checked/cancel:grid ring-red-200 rounded-md
+                    <!-- On Check of Cancel -->
+                    <section class="hidden px-5 peer-checked/cancel:grid ring-red-200 rounded-md
                col-span-3 lg:grid-cols-2 gap-5">
                     <!-- Product One -->
                     <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
                                         Order Placed On
@@ -470,7 +494,7 @@
                          </div>
                          <div class="grid md:grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/bag1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/bag1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -492,7 +516,7 @@
                     </div>
                     <!-- Product Two -->
                     <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
                                         Order Placed On
@@ -507,7 +531,7 @@
                          </div>
                          <div class="grid md:grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/shirt1.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/shirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -528,7 +552,7 @@
                          </div>
                     </div>
                     <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
                                         Order Placed On
@@ -543,7 +567,7 @@
                          </div>
                          <div class="grid md:grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/tablet.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/tablet.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -564,7 +588,7 @@
                          </div>
                     </div>
                     <div class="grid border rounded-md text-sm shadow-md">
-                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b-2 border-gray-200 items-center">
+                         <div class="grid grid-cols-2 p-3 bg-slate-100 border-b border-gray-200 items-center">
                               <div class="grid grid-cols-2">
                                    <h1 class="text-nowrap">
                                         Order Placed On
@@ -579,7 +603,7 @@
                          </div>
                          <div class="grid md:grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/tshirt2.jpg" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/tshirt2.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -599,55 +623,64 @@
                               </div>
                          </div>
                     </div>
+                    </section>
                </section>
           </section>
      </section>
 
      <!-- Footer -->
-     <footer class="h-80 border-t mt-10 hidden sm:block" id="footer">
-          <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5">
-               <section class="sm:col-span-4">
-                    <h1 class="text-5xl font-extrabold text-black/10 sm:text-9xl">
+     <footer class="border-t pb-5 hidden sm:block dark:bg-neutral-600 dark:border-neutral-600" id="footer">
+          <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5 dark:text-white">
+               <section class="sm:col-span-4 ">
+                    <h1 class="text-5xl font-extrabold text-black/10 sm:text-9xl dark:text-neutral-400">
                          ONE SHOP
                     </h1>
                </section>
                <section>
                     <ul class="space-y-2">
-                         <li class="text-black/50 font-bold text-md">Account</li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Profile</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Orders</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Returns</a></li>
+                         <li class="text-black/50 font-bold text-md dark:text-neutral-200">Account</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Profile</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Orders</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Returns</a></li>
                     </ul>
                </section>
                <section>
                     <ul class="space-y-2">
-                         <li class="text-black/50 font-bold text-md">Get To Know Us</li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">About Us</a></li>
+                         <li class="text-black/50 font-bold text-md dark:text-neutral-200">Get To Know Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">About Us</a></li>
                     </ul>
                </section>
                <section>
                     <ul class="space-y-2">
-                         <li class="text-black/50 font-bold text-md">Connect With Us</li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">X</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Facebook</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Instagram</a></li>
+                         <li class="text-black/50 font-bold text-md dark:text-neutral-200">Connect With Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">X</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Facebook</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Instagram</a></li>
                     </ul>
                </section>
                <section>
                     <ul class="space-y-2">
-                         <li class="text-black/50 font-bold text-md">Let Us Help you</li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Privacy Policy</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Guidelines</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Return Centre</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Help</a></li>
+                         <li class="text-black/50 font-bold text-md dark:text-neutral-200">Let Us Help you</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Privacy Policy</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Guidelines</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Return Centre</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Help</a></li>
                     </ul>
                </section>
           </section>
           <section class="justify-center flex mt-5">
                <a href="">
-                    <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer"></i>
+                    <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer dark:text-white"></i>
                </a>
           </section>
+     </footer>
+     <footer class="p-3 flex flex-wrap justify-start sm:hidden items-center dark:bg-neutral-700 text-neutral-400 gap-5">
+          <h3 class="font-bold">
+               One Shop
+          </h3>
+          <a href=" ">
+               <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer dark:text-neutral-400"></i>
+          </a>
      </footer>
 
      <!-- JS -->

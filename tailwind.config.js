@@ -26,7 +26,7 @@ module.exports = {
             transform : 'translateY(50px)'
           },
           '100%':{
-            transform : 'translateX(0px)'
+            transform : 'translateY(0px)'
           }
         }
       }
