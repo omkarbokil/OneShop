@@ -7,7 +7,7 @@
      <link rel="stylesheet" href="/CSS/o-oneshop.css">
      <script src="https://kit.fontawesome.com/95749087e1.js" crossorigin="anonymous"></script>
      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
 </head>
 <body class="overflow-x-hidden font-figtree dark">
      <nav class="bg-[#ffffff] dark:bg-neutral-800 dark:text-white flex flex-col md:flex-row items-center gap-3 p-5 sticky top-[0.1px] shadow-md z-50" id="navbar">
@@ -59,7 +59,7 @@
           <section class="absolute text-white -top-96 transition-all flex flex-col items-center" id="collapsible-menu">
                <ul class=" gap-5 justify-center bg-[#324464] p-8 w-screen flex flex-col flex-wrap items-center">
                     <a class="overflow-hidden"><li class="group cursor-pointer overflow-hidden hover:bg-black/10 rounded-full py-3 px-3 flex" id="mode-switch">
-                         <div class="flex hidden" id="light-mode">
+                         <div class="flex hidden animate-mode" id="light-mode">
                               <span class="material-symbols-outlined">
                                    light_mode
                               </span>
@@ -83,8 +83,19 @@
           </section>
      </nav>
 
-     <a><li class="cursor-pointer flex fixed right-0 bottom-0 max-h-screen p-10 z-50">
-          <div class="relative">
+     <!-- Add to Cart Button -->
+     <div class="cursor-pointer flex fixed right-5 bottom-5 max-h-screen z-50 items-center gap-5">
+          <div class="relative hidden">
+               <div class="flex gap-3 items-center p-4 bg-[#324464] rounded-lg text-white dark:bg-neutral-700">
+                    <span>
+                         Item already in Cart
+                    </span>
+                    <span class="material-symbols-outlined rounded-full text-white">
+                         close
+                    </span>
+               </div>
+          </div>
+          <div class="relative" id="shopping-cart">
                <span class="material-symbols-outlined p-4 bg-[#324464] rounded-full text-white">
                     shopping_cart
                </span>
@@ -92,7 +103,7 @@
                     0
                </span>
           </div>
-     </li></a>
+     </div>
 
      <!-- Banner Images -->
      <section class="bg-[#ffffff] dark:bg-neutral-800">
@@ -125,16 +136,16 @@
 
      <!--Todays Deals -->
      <section class="bg-white dark:bg-neutral-800 py-20">
-          <section class="bg-[#ffffff] px-10 sm:p-0 sm:mx-40 border-green-500 dark:bg-neutral-800 dark:*:text-white">
+          <section class="bg-[#ffffff] px-10 sm:p-0 sm:mx-40 dark:bg-neutral-800 dark:*:text-white">
                <section class=" pb-5 text-2xl font-bold text-[#484848] ">
                     Today's Deals
                </section>
                <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-5 place-content-center">
 
                     <!-- First Item -->
-                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer dark:border-neutral-600">
+                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer dark:border-neutral-600 dark:bg-[#9fb9e6]/10">
                     <div class="grid text-center py-2">
-                         <img src="/Material/smartwatch1.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b product_img products dark:bg-neutral-800 dark:border-b-neutral-600">
+                         <img src="/Material/smartwatch1.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b product_img products dark:border-b-neutral-600 dark:bg-transparent">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] dark:text-neutral-400">
                               <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap product-name dark:text-white">
                                    beatXP Marv Raze
@@ -157,9 +168,9 @@
                     </div>
 
                     <!-- Second Item -->
-                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer dark:border-neutral-600">
+                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer dark:border-neutral-600 dark:bg-[#9fb9e6]/10">
                     <div class="grid text-center py-2">
-                         <img src="/Material/smartwatch2.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-neutral-800 dark:border-b-neutral-600">
+                         <img src="/Material/smartwatch2.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-transparent dark:border-b-neutral-600">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] dark:text-neutral-400">
                               <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap product-name dark:text-white">
                                    boAt Xtend Smart Watch
@@ -182,9 +193,9 @@
                     </div>
 
                     <!-- Third Item -->
-                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600">
+                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600 dark:bg-[#9fb9e6]/10">
                     <div class="grid text-center py-2">
-                         <img src="/Material/monitor1.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-neutral-800 dark:border-b-neutral-600">
+                         <img src="/Material/monitor1.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-transparent dark:border-b-neutral-600">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] dark:text-neutral-400">
                               <h1 class="text-[#484848] text-ellipsis overflow-hidden text-nowrap product-name dark:text-white">
                                    Samsung 32-Inch(80cm) LCD M5 FHD Smart Monitor
@@ -207,9 +218,9 @@
                     </div>
 
                     <!-- Fourth Item -->
-                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600">
+                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600 dark:bg-[#9fb9e6]/10">
                     <div class="grid text-center py-2">
-                         <img src="/Material/mobile3.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-neutral-800 dark:border-b-neutral-600">
+                         <img src="/Material/mobile3.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-transparent dark:border-b-neutral-600">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] dark:text-neutral-400">
                               <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap product-name dark:text-white">
                                    HONOR 90 5G
@@ -232,9 +243,9 @@
                     </div>
 
                     <!-- Fifth Item -->
-                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600">
+                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600 dark:bg-[#9fb9e6]/10">
                     <div class="grid text-center py-2 px-4">
-                         <img src="/Material/bag1.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-neutral-800 dark:border-b-neutral-600">
+                         <img src="/Material/bag1.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-transparent dark:border-b-neutral-600">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] dark:text-neutral-400">
                               <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap product-name dark:text-white">
                                    Wildcraft Casual Backpack
@@ -257,9 +268,9 @@
                     </div>
 
                     <!-- Sixth Item -->
-                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600">
+                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600 dark:bg-[#9fb9e6]/10">
                     <div class="grid text-center py-2">
-                         <img src="/Material/shoes.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-neutral-800 dark:border-b-neutral-600">
+                         <img src="/Material/shoes.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-transparent dark:border-b-neutral-600">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] dark:text-neutral-400">
                               <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap product-name dark:text-white">
                                    ANDUNE Men’s Shoes
@@ -282,9 +293,9 @@
                     </div>
 
                     <!-- Seventh Item -->
-                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600">
+                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm   border relative item-1 hover:shadow-lg transition-all    hover:cursor-pointer dark:border-neutral-600 dark:bg-[#9fb9e6]/10">
                     <div class="grid text-center py-2">
-                         <img src="/Material/tshirt.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-neutral-800 dark:border-b-neutral-600">
+                         <img src="/Material/tshirt.png" alt="" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-transparent dark:border-b-neutral-600">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] dark:text-neutral-400">
                               <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap product-name dark:text-white">
                                    PUMA Boy's Regular Fit T Shirt
@@ -307,14 +318,14 @@
                     </div>
 
                     <!-- Eighth Item -->
-                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer dark:border-neutral-600">
+                    <div class="h-auto min-w-56 rounded-md bg-cover shadow-sm border relative item-1 hover:shadow-lg transition-all hover:cursor-pointer dark:border-neutral-600 dark:bg-[#9fb9e6]/10">
                          <div class="grid text-center py-2">
-                              <img src="/Material/tws.png" alt="TWS" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-neutral-800 dark:border-b-neutral-600">
+                              <img src="/Material/tws.png" alt="TWS" class="justify-self-center max-w-52 object-contain h-60 pt-5 px-10 rounded-t-lg bg-[#ffffff] border-b products dark:bg-transparent dark:border-b-neutral-600">
                               <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] dark:text-neutral-400">
                                    <h1 class="text-[#484848] overflow-hidden text-ellipsis text-nowrap product-name dark:text-white">
                                         OnePlus Nord Buds
                                    </h1>
-                                   <span class="discounted-price">₹1,979 | </   span>
+                                   <span class="discounted-price">₹1,979 | </span>
                                    <span class="line-through text-sm  actual-price">
                                         ₹3,299
                                    </span>
@@ -337,24 +348,24 @@
      </section>
 
      <!-- Product Modal -->
-     <div class="fixed top-0 bg-white/80 h-screen z-50 w-screen flex items-center hidden justify-center product-modal">
-          <section class="absolute border-2 bg-white shadow-2xl grid rounded-lg p-5 max-w-[40rem] min-w-[40rem] dark:bg-neutral-800 dark:border-neutral-600">
+     <div class="fixed top-0 bg-black/60 h-screen z-50 w-screen flex items-center hidden justify-center product-modal transition-all">
+          <section class="absolute border-2 bg-white shadow-2xl grid rounded-lg p-5 dark:bg-neutral-800 dark:border-neutral-600 m-5">
                <span class="material-symbols-outlined text-black justify-self-end p-2 hover:bg-[#9fb9e6]/50 rounded-full hover:cursor-pointer transition-all product-modal-close dark:text-white dark:hover:bg-slate-500">
                     close
                </span>
                <section class="grid md:grid-cols-2 place-items-center justify-evenly">
                     <div>
-                         <img src="" alt="" class="object-contain aspect-square[1/1] h-56 pt-5 px-10 rounded-t-lg bg-[#ffffff] dark:bg-neutral-800" id="product-modal-img">
+                         <img src="" alt="" class="object-contain aspect-square[1/1] h-56 pt-5 px-10 rounded-t-lg bg-[#ffffff] dark:bg-neutral-800 image">
                     </div>
-                    <div class="grid place-items-center gap-5">
+                    <div class="grid place-items-center gap-5 text-center">
                          <div class="text-sm overflow-hidden space-y-1 pt-4 pb-2 px-4 text-[#484848] max-w-80 dark:text-neutral-400">
-                              <h1 class="text-[#484848] text-2xl overflow-hidden text-ellipsis text-nowrap dark:text-white" id="product-modal-name">
+                              <h1 class="text-[#484848] text-2xl overflow-hidden text-ellipsis text-nowrap dark:text-white name">
                                   
                               </h1>
-                              <span class="text-xl" id="product-modal-disc-price">
+                              <span class="text-xl disc-price">
                                    
                               </span>
-                              <span class="line-through" id="product-modal-acc-price">
+                              <span class="line-through acc-price">
                                    
                               </span>
                          </div>
@@ -371,17 +382,47 @@
           </section>
      </div>
 
+     <!-- Cart Modal -->
+     <section class="cart-modal fixed top-14 -right-96 z-50 m-5 p-3 rounded-md bg-white border dark:bg-neutral-800 dark:border-neutral-600 dark:*:rounded-md dark:*:text-white dark:*:bg-[#9fb9e6]/10 grid gap-3 cart transition-all">
+          <section>
+               <div class="grid grid-cols-2 place-items-center border dark:border-neutral-600 p-3 max-w-[20rem] gap-5">
+                    <img src="/Material/airfryer.png" alt="" class="max-h-32 cart-image">
+                    <div class="max-w-[10rem]">
+                         <h1 class="cart-name overflow-hidden text-nowrap text-ellipsis">
+                              Item Name
+                         </h1>
+                         <span class="cart-disc-price text-sm ">
+                              100
+                         </span>
+                         <span class="text-sm line-through cart-acc-price">
+                              100
+                         </span>
+                         <div class="text-white text-sm *:rounded-full gap-2 buy-now mt-2 flex items-center">
+                              <button class="bg-[#324464] hover:scale-105 transition-all px-3 py-2">
+                                   Buy Now
+                              </button>
+                              <button class="bg-[#E52E06] text-black hover:scale-105 transition-all add-to-cart">
+                                   <span class="material-symbols-outlined p-2 text-white">
+                                        delete
+                                   </span>
+                              </button>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </section>
+
      <!-- Sale -->
-     <section class="w-screen h-auto p-10 bg-[#9fb9e6]/20 flex items-center justify-around flex-wrap">
-          <h1 class="font-bold space-y-5 text-[#324464]">
+     <section class="w-screen h-auto p-10 bg-[#9fb9e6]/20 flex items-center justify-around flex-wrap dark:bg-neutral-500">
+          <h1 class="font-bold space-y-5 text-[#324464] dark:text-white">
                <p class="text-3xl sm:text-5xl text-center">
                     Up To 80% Discount
                </p>
-               <p class="text-2xl sm:text-4xl flex flex-col sm:flex-row items-center gap-8 justify-center sm:justify-start text-center">
+               <p class="text-2xl sm:text-4xl flex flex-col sm:flex-row items-center gap-8 justify-center sm:justify-start text-center dark:text-neutral-300">
                     Check it Out
                     <span>
                          <a href="">
-                              <i class="fa-solid fa-arrow-right text-2xl px-4 sm:px-8 py-2 border border-[#324464] rounded-full text-[#324464] hover:cursor-pointer hover:bg-[#E52E06] hover:text-white hover:border-[#E52E06] hover:transition-all"></i>
+                              <i class="fa-solid fa-arrow-right text-2xl px-4 sm:px-8 py-2 border border-[#324464] rounded-full text-[#324464] hover:cursor-pointer hover:bg-[#E52E06] hover:text-white hover:border-[#E52E06] hover:transition-all dark:border-neutral-300 dark:text-neutral-300 dark:hover:border-[#E52E06] dark:hover:text-white"></i>
                          </a>
                     </span>
                </p>
@@ -392,93 +433,93 @@
      </section>
 
      <!-- Featured Products -->
-     <section>
-          <section class="grid lg:grid-cols-2 p-20 sm:p-0 sm:mx-40 my-10 gap-8 place-content-center dark:bg-neutral-800">
+     <section class="bg-white dark:bg-neutral-800 py-10">
+          <section class="grid lg:grid-cols-2 px-10 sm:p-0 sm:mx-40 gap-8 place-content-center dark:bg-neutral-800">
                <!-- Electronics -->
-               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
-                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5 dark:text-white dark:*:border-neutral-600">
+                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464] dark:text-white">
                          Electronics
                     </h1>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
-                         <img src="/Material/mobile3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/mobile3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5">Mobile from Realme</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/tablet.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/tablet.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5">Tablet from Redmi</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/headphones.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/headphones.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5">Headphones from SONY</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/mouse.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/mouse.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5">Mouse from Logitech</p>
                     </div>
                </section>
                <!-- Home Appliances -->
-               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
-                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5 dark:text-white dark:*:border-neutral-600">
+                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464] dark:text-white">
                          Home Appliances
                     </h1>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
-                         <img src="/Material/airfryer.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center      mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/airfryer.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center      group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Air Fryer from Nutricook</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/sandwichmaker.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center      mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/sandwichmaker.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center      group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Sandwich Maker from Prestige</p>
                     </div> 
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/mixer.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/mixer.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Mixer Grinder from Lifelong</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/coffeemaker1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/coffeemaker1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Coffee Maker from Piegon</p>
                     </div>
                </section>
                <!-- Clothing -->
-               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
-                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5 dark:text-white dark:*:border-neutral-600">
+                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464] dark:text-white">
                          Clothing
                     </h1>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
-                         <img src="/Material/tshirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/tshirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center  group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">T-Shirt from Lymio</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/shirt3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/shirt3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">T-Shirt from Lymio</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/shirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/shirt1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Casual Shirt from Laxeric</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/shirt4.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/shirt4.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center   group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Casual Shirt from Lymio</p>
                     </div>
                </section>
                <!-- Books -->
-               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5">
-                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464]">
+               <section class="grid md:grid-cols-2 rounded-md p-5 gap-5 dark:text-white dark:*:border-neutral-600">
+                    <h1 class="md:col-span-2 font-bold text-2xl text-[#324464] dark:text-white">
                          Books
                     </h1>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out">
-                         <img src="/Material/book1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer ease-in-out dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/book1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Alchemist</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/book.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center     mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/book.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center     group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Power of Your Subconscious Mind</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/book2.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/book2.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">Atomic Habits</p>
                     </div>
-                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer">
-                         <img src="/Material/book3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    mix-blend-color-burn group-hover:scale-110 transition-all">
+                    <div class="group rounded-md text-center border grid hover:shadow-lg transition-all hover:cursor-pointer dark:bg-[#9fb9e6]/10">
+                         <img src="/Material/book3.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center    group-hover:scale-110 transition-all">
                          <p class="pb-2 px-5 text-nowrap overflow-hidden text-ellipsis">The Monk Who Sold His Ferrari</p>
                     </div>
                </section>
@@ -486,50 +527,58 @@
      </section>
           
      <!-- Footer -->
-     <footer class="h-80 border-t mt-10 hidden sm:block" id="footer">
-          <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5">
-               <section class="sm:col-span-4">
-                    <h1 class="text-5xl font-extrabold text-black/10 sm:text-9xl">
+     <footer class="border-t pb-5 hidden sm:block dark:bg-neutral-600 dark:border-neutral-600" id="footer">
+          <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5 dark:text-white">
+               <section class="sm:col-span-4 ">
+                    <h1 class="text-5xl font-extrabold text-black/10 sm:text-9xl dark:text-neutral-400">
                          ONE SHOP
                     </h1>
                </section>
                <section>
                     <ul class="space-y-2">
-                         <li class="text-black/50 font-bold text-md">Account</li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Profile</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Orders</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Returns</a></li>
+                         <li class="text-black/50 font-bold text-md dark:text-neutral-200">Account</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Profile</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Orders</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Returns</a></li>
                     </ul>
                </section>
                <section>
                     <ul class="space-y-2">
-                         <li class="text-black/50 font-bold text-md">Get To Know Us</li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">About Us</a></li>
+                         <li class="text-black/50 font-bold text-md dark:text-neutral-200">Get To Know Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">About Us</a></li>
                     </ul>
                </section>
                <section>
                     <ul class="space-y-2">
-                         <li class="text-black/50 font-bold text-md">Connect With Us</li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">X</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Facebook</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Instagram</a></li>
+                         <li class="text-black/50 font-bold text-md dark:text-neutral-200">Connect With Us</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">X</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Facebook</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Instagram</a></li>
                     </ul>
                </section>
                <section>
                     <ul class="space-y-2">
-                         <li class="text-black/50 font-bold text-md">Let Us Help you</li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Privacy Policy</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Guidelines</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Return Centre</a></li>
-                         <li class="text-black/50 cursor-pointer hover:underline text-sm"><a href="">Help</a></li>
+                         <li class="text-black/50 font-bold text-md dark:text-neutral-200">Let Us Help you</li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Privacy Policy</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Guidelines</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Return Centre</a></li>
+                         <li class="text-black/50 cursor-pointer hover:underline text-sm dark:text-neutral-300"><a href="">Help</a></li>
                     </ul>
                </section>
           </section>
           <section class="justify-center flex mt-5">
                <a href="">
-                    <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer"></i>
+                    <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer dark:text-white"></i>
                </a>
           </section>
+     </footer>
+     <footer class="p-3 flex flex-wrap justify-start sm:hidden items-center dark:bg-neutral-700 text-neutral-400 gap-5">
+          <h3 class="font-bold">
+               One Shop
+          </h3>
+          <a href=" ">
+               <i class="fa-solid fa-angle-up p-3 border rounded-full text-black/50 hover:cursor-pointer dark:text-neutral-400"></i>
+          </a>
      </footer>
 
      <!-- JS -->

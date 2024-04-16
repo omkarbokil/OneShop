@@ -5,6 +5,7 @@ let collapsibleMenu = document.querySelector("#collapsible-menu");
 let navbar = document.querySelector("#navbar");
 let footer = document.querySelector("#footer");
 let body = document.getElementsByTagName("body");
+let fade = document.querySelector(".fade")
 
 collapsibleMenuOpen.addEventListener("click", () => {
      collapsibleMenu.style.top = 0;
@@ -30,14 +31,61 @@ itemOne.forEach((val, ind) => {
      })
 })
 
+// -------------------------------------------------------------------------------------
+// Products
+let products = document.querySelectorAll(".products");
+let productModal = document.querySelector(".product-modal");
+let productModalClose = document.querySelector(".product-modal-close");
+let productName = document.querySelectorAll(".product-name");
+let discountedPrice = document.querySelectorAll(".discounted-price");
+let actualPrice = document.querySelectorAll(".actual-price");
+
+// Product Modal Variables
+let image = document.querySelector(".image");
+let name = document.querySelector(".name");
+let discPrice = document.querySelector(".disc-price");
+let accPrice = document.querySelector(".acc-price");
+
+products.forEach((productValue, productIndex) => {
+     productValue.addEventListener("click", () => {
+               productData(productIndex);
+               productModal.classList.toggle("hidden");
+     })
+})
+
+let productData = (productIndex) => {
+          // Getting Values of Product Based on Index
+          let pImage = products[productIndex].src;
+          let pName = productName[productIndex].innerText;
+          let pDiscPrice = discountedPrice[productIndex].innerText;
+          let pAccPrice = actualPrice[productIndex].innerText;
+               
+          // Setting Values
+          image.src = pImage;
+          name.innerText = pName;
+          discPrice.innerText = pDiscPrice;
+          accPrice.innerText = pAccPrice;
+}
+
+
+productModalClose.addEventListener("click", () => {
+     productModal.classList.toggle("hidden")
+})
+
+// -------------------------------------------------------------------------------------
 // Add To Cart
 let addToCart = document.querySelectorAll(".add-to-cart");
 let addToCartCount = document.querySelector(".add-to-cart-count");
 let count = 0;
 let shoppingCart = document.querySelector("#shopping-cart");
-let cart = document.querySelector(".cart");
+let cartModal = document.querySelector(".cart-modal");
 
-let c = (i) => {
+let cartImage = document.querySelector(".cart-image");
+let cartName = document.querySelector(".cart-name");
+let cartDiscPrice = document.querySelector(".cart-disc-price");
+let cartAccPrice = document.querySelector(".cart-acc-price");
+
+let cnt = (i) => {
      count += i;
      addToCartCount.innerText = count;
 }
@@ -46,7 +94,7 @@ addToCart.forEach((val, ind) => {
      val.addEventListener("click", ()=> {
           if(localStorage.getItem(ind) == null){
                localStorage.setItem(ind, 1);
-               c(1);
+               cnt(1);
           }
      })
 
@@ -56,63 +104,76 @@ addToCart.forEach((val, ind) => {
      addToCartCount.innerText = count;
 })
 
+let cartToggle = 1;
+
 shoppingCart.addEventListener("click", () => {
-     addToCart.forEach((val, ind) => {
-          if(localStorage.getItem(ind) !== null){
-               productData(ind);
-          }
-     })
-     cart.style.right = "0";
-})
-
-// if(localStorage.getItem(0) > 0)
-// {
-//      addToCartCount.innerText = localStorage.getItem(0);
-// }
-
-// Products
-let products = document.querySelectorAll(".products");
-let productModal = document.querySelector(".product-modal");
-let productModalClose = document.querySelector(".product-modal-close");
-
-let modals = document.querySelectorAll(".modals");
-let image = document.querySelectorAll(".image");
-let name = document.querySelectorAll(".name");
-let discPrice = document.querySelectorAll(".disc-price");
-let accPrice = document.querySelectorAll(".acc-price");
-
-let productName = document.querySelectorAll(".product-name");
-let discountedPrice = document.querySelectorAll(".discounted-price");
-let actualPrice = document.querySelectorAll(".actual-price");
-
-products.forEach((val, pInd) => {
-     val.addEventListener("click", () => {
-               productData(pInd);
-               productModal.classList.toggle("hidden")
-     })
-})
-
-let productData = (pInd) => {
-          // Getting Values of Product Based on Index
-          modals.forEach((val, ind) => {
-               let pImage = products[pInd].src;
-               let pName = productName[pInd].innerText;
-               let pDiscPrice = discountedPrice[pInd].innerText;
-               let pAccPrice = actualPrice[pInd].innerText;
-               
-               // Setting Values
-               image[ind].src = pImage;
-               name[ind].innerText = pName;
-               discPrice[ind].innerText = pDiscPrice;
-               accPrice[ind].innerText = pAccPrice;
+     if(cartToggle == 1){
+          addToCart.forEach((val, ind) => {
+               if(localStorage.getItem(ind) !== null){
+                    cartData(ind);
+               }
           })
+          cartModal.style.right = "0";
+          fade.classList.toggle("hidden");
+          cartToggle = 2;
+     }
+})
+
+     fade.addEventListener("click", () => {
+     cartModal.style.right = "-50rem";
+     fade.classList.toggle("hidden");
+     cartToggle = 1;
+     })
+
+
+let cartData = (ind) => {
+     // Getting Values of Product Based on Index
+     let pImage = products[ind].src;
+     let pName = productName[ind].innerText;
+     let pDiscPrice = discountedPrice[ind].innerText;
+     let pAccPrice = actualPrice[ind].innerText;
+     
+     // Setting Values
+     cartImage = pImage;
+     cartName = pName;
+     cartDiscPrice = pDiscPrice;
+     cartAccPrice = pAccPrice;
+
+     // Creating New Element
+     let element = document.createElement("section");
+
+     // Adding Data and styling into created element
+     element.innerHTML = `
+     <div class="grid grid-cols-2 items-center dark:border-neutral-600 p-3 gap-3 rounded-md">
+          <img src=${cartImage} alt="" class="max-h-32 cart-image justify-self-center">
+          <div>
+               <h1 class="cart-name overflow-hidden text-nowrap text-ellipsis">
+                    ${cartName}
+               </h1>
+               <span class="cart-disc-price text-sm ">
+               ${cartDiscPrice}
+               </span>
+               <span class="text-sm line-through cart-acc-price">
+               ${cartAccPrice}
+               </span>
+               <div class="text-white text-sm *:rounded-full gap-2 buy-now mt-2 flex items-center">
+                    <span class="material-symbols-outlined p-1 bg-slate-500 remove-qty" role="button">
+                         remove
+                    </span>
+                    <span class="p-2 text-black dark:text-white text-lg qty-count">
+                         1
+                    </span>
+                    <span class="material-symbols-outlined p-1 bg-slate-500 add-qty" role="button">
+                         add
+                    </span>
+               </div>
+          </div>
+     </div>
+     `;
+          cartModal.insertBefore(element, cartModal.childNodes[0]);
 }
 
-
-productModalClose.addEventListener("click", () => {
-     productModal.classList.toggle("hidden")
-})
-
+// -------------------------------------------------------------------------------------
 // Dark Light Mode
 let modeSwitch = document.querySelectorAll("#mode-switch");
 let darkMode = document.querySelectorAll("#dark-mode");
@@ -157,5 +218,16 @@ modeSwitch.forEach((val, ind) => {
                localStorage.setItem("darklight", 1);
                body[0].classList.toggle("dark");
           }
+     })
+})
+
+// Quantity
+let remeoveQty = document.querySelectorAll(".remove-qty");
+let addQty = document.querySelectorAll(".add-qty");
+let qtyCount = document.querySelectorAll(".qty-count");
+
+remeoveQty.forEach((val) => {
+     val.addEventListener("click", () => {
+
      })
 })
