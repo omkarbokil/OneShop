@@ -33,7 +33,7 @@ itemOne.forEach((val, ind) => {
 // Add To Cart
 let addToCart = document.querySelectorAll(".add-to-cart");
 let addToCartCount = document.querySelector(".add-to-cart-count");
-// let count = Number(localStorage.getItem(0));
+let count = Number(localStorage.getItem(0));
 
 addToCart.forEach((val, ind) => {
      val.addEventListener("click", ()=> {
