@@ -33,20 +33,40 @@ itemOne.forEach((val, ind) => {
 // Add To Cart
 let addToCart = document.querySelectorAll(".add-to-cart");
 let addToCartCount = document.querySelector(".add-to-cart-count");
-let count = Number(localStorage.getItem(0));
+let count = 0;
+let shoppingCart = document.querySelector("#shopping-cart");
+
+let c = (i) => {
+     count += i;
+     addToCartCount.innerText = count;
+}
 
 addToCart.forEach((val, ind) => {
      val.addEventListener("click", ()=> {
-          count += 1;
-          localStorage.setItem(0, count)
-          addToCartCount.innerText = localStorage.getItem(0);
+          if(localStorage.getItem(ind) == null){
+               localStorage.setItem(ind, 1);
+               c(1);
+          }
+     })
+
+     if(localStorage.getItem(ind) !== null){
+          count += Number(localStorage.getItem(ind));
+     }
+     addToCartCount.innerText = count;
+})
+
+shoppingCart.addEventListener("click", () => {
+     addToCart.forEach((val, ind) => {
+          if(localStorage.getItem(ind) !== null){
+               console.log(ind);
+          }
      })
 })
 
-if(localStorage.getItem(0) > 0)
-{
-     addToCartCount.innerText = localStorage.getItem(0);
-}
+// if(localStorage.getItem(0) > 0)
+// {
+//      addToCartCount.innerText = localStorage.getItem(0);
+// }
 
 // Products
 let products = document.querySelectorAll(".products");

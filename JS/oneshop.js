@@ -33,52 +33,81 @@ itemOne.forEach((val, ind) => {
 // Add To Cart
 let addToCart = document.querySelectorAll(".add-to-cart");
 let addToCartCount = document.querySelector(".add-to-cart-count");
-// let count = Number(localStorage.getItem(0));
+let count = 0;
+let shoppingCart = document.querySelector("#shopping-cart");
+let cart = document.querySelector(".cart");
+
+let c = (i) => {
+     count += i;
+     addToCartCount.innerText = count;
+}
 
 addToCart.forEach((val, ind) => {
      val.addEventListener("click", ()=> {
-          count += 1;
-          localStorage.setItem(0, count)
-          addToCartCount.innerText = localStorage.getItem(0);
+          if(localStorage.getItem(ind) == null){
+               localStorage.setItem(ind, 1);
+               c(1);
+          }
      })
+
+     if(localStorage.getItem(ind) !== null){
+          count += Number(localStorage.getItem(ind));
+     }
+     addToCartCount.innerText = count;
 })
 
-if(localStorage.getItem(0) > 0)
-{
-     addToCartCount.innerText = localStorage.getItem(0);
-}
+shoppingCart.addEventListener("click", () => {
+     addToCart.forEach((val, ind) => {
+          if(localStorage.getItem(ind) !== null){
+               productData(ind);
+          }
+     })
+     cart.style.right = "0";
+})
+
+// if(localStorage.getItem(0) > 0)
+// {
+//      addToCartCount.innerText = localStorage.getItem(0);
+// }
 
 // Products
 let products = document.querySelectorAll(".products");
 let productModal = document.querySelector(".product-modal");
 let productModalClose = document.querySelector(".product-modal-close");
 
-let productModalImg = document.getElementById("product-modal-img");
-let productModalName = document.getElementById("product-modal-name");
-let productModalDiscPrice = document.getElementById("product-modal-disc-price");
-let productModalAccPrice = document.getElementById("product-modal-acc-price");
+let modals = document.querySelectorAll(".modals");
+let image = document.querySelectorAll(".image");
+let name = document.querySelectorAll(".name");
+let discPrice = document.querySelectorAll(".disc-price");
+let accPrice = document.querySelectorAll(".acc-price");
 
 let productName = document.querySelectorAll(".product-name");
 let discountedPrice = document.querySelectorAll(".discounted-price");
 let actualPrice = document.querySelectorAll(".actual-price");
 
-products.forEach((val, ind) => {
+products.forEach((val, pInd) => {
      val.addEventListener("click", () => {
-          // Getting Values of Product Based on Index
-          let imgSource = products[ind].src;
-          let name = productName[ind].innerText;
-          let discPrice = discountedPrice[ind].innerText;
-          let accPrice = actualPrice[ind].innerText;
-          
-          // Setting Values
-          productModalImg.src = imgSource;
-          productModalName.innerText = name;
-          productModalDiscPrice.innerText = discPrice;
-          productModalAccPrice.innerText = accPrice;
-
-          productModal.classList.toggle("hidden")
+               productData(pInd);
+               productModal.classList.toggle("hidden")
      })
 })
+
+let productData = (pInd) => {
+          // Getting Values of Product Based on Index
+          modals.forEach((val, ind) => {
+               let pImage = products[pInd].src;
+               let pName = productName[pInd].innerText;
+               let pDiscPrice = discountedPrice[pInd].innerText;
+               let pAccPrice = actualPrice[pInd].innerText;
+               
+               // Setting Values
+               image[ind].src = pImage;
+               name[ind].innerText = pName;
+               discPrice[ind].innerText = pDiscPrice;
+               accPrice[ind].innerText = pAccPrice;
+          })
+}
+
 
 productModalClose.addEventListener("click", () => {
      productModal.classList.toggle("hidden")
