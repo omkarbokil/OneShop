@@ -94,6 +94,7 @@ let cartClose = () => {
 
      while(child){
           cartModal.removeChild(child);
+          console.log(child);
           child = cartModal.lastElementChild;
      }
 }
@@ -237,12 +238,46 @@ modeSwitch.forEach((val, ind) => {
 })
 
 // Quantity
-let remeoveQty = document.querySelectorAll(".remove-qty");
+let removeQty = document.querySelectorAll(".remove-qty");
 let addQty = document.querySelectorAll(".add-qty");
 let qtyCount = document.querySelectorAll(".qty-count");
 
-remeoveQty.forEach((val) => {
+removeQty.forEach((val) => {
      val.addEventListener("click", () => {
+          console.log("Hello");
+     })
+})
 
+shoppingCart.addEventListener("click", () => {
+     let removeQty = document.querySelectorAll(".remove-qty");
+     let addQty = document.querySelectorAll(".add-qty");
+     let qtyCount = document.querySelectorAll(".qty-count");
+     let dispQty = 0;
+
+     removeQty.forEach((val, removeIndex) => {
+          val.addEventListener("click", () => {
+               dispQty = Number(qtyCount[removeIndex].innerText) - 1;
+               qtyCount[removeIndex].innerText = dispQty;
+               console.log(removeIndex);
+
+               let child = cartModal.childNodes[removeIndex];
+               console.log(child);
+
+               if(dispQty == 0){
+                    cartModal.removeChild(child);
+               }
+               dispQty = 0;
+
+               removeQty = document.querySelectorAll(".remove-qty");
+               console.log(removeQty);
+          })
+     })
+
+     addQty.forEach((val, addIndex) => {
+          val.addEventListener("click", () => {
+               dispQty = Number(qtyCount[addIndex].innerText) + 1;
+               qtyCount[addIndex].innerText = dispQty;
+               dispQty = 0;
+          })
      })
 })
