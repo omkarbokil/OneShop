@@ -632,26 +632,6 @@ video {
   top: 85%;
 }
 
-.top-1{
-  top: 0.25rem;
-}
-
-.left-0{
-  left: 0px;
-}
-
-.left-1{
-  left: 0.25rem;
-}
-
-.top-\[\]{
-  top: ;
-}
-
-.top-\[0\.1\]{
-  top: 0.1;
-}
-
 .z-10{
   z-index: 10;
 }
@@ -752,12 +732,16 @@ video {
   height: auto;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .h-full{
   height: 100%;
 }
 
-.h-screen{
-  height: 100vh;
+.h-32{
+  height: 8rem;
 }
 
 .max-h-screen{
@@ -770,6 +754,14 @@ video {
 
 .max-h-36{
   max-height: 9rem;
+}
+
+.min-h-32{
+  min-height: 8rem;
+}
+
+.min-h-36{
+  min-height: 9rem;
 }
 
 .w-24{
@@ -824,12 +816,16 @@ video {
   min-width: 20rem;
 }
 
-.min-w-\[25rem\]{
-  min-width: 25rem;
-}
-
 .min-w-\[80\%\]{
   min-width: 80%;
+}
+
+.min-w-2{
+  min-width: 0.5rem;
+}
+
+.min-w-28{
+  min-width: 7rem;
 }
 
 .max-w-36{
@@ -848,8 +844,16 @@ video {
   max-width: 20rem;
 }
 
+.max-w-\[20rem\]{
+  max-width: 20rem;
+}
+
 .max-w-\[25rem\]{
   max-width: 25rem;
+}
+
+.max-w-32{
+  max-width: 8rem;
 }
 
 @keyframes mode{
@@ -1318,10 +1322,6 @@ video {
 
 .pt-10{
   padding-top: 2.5rem;
-}
-
-.pt-3{
-  padding-top: 0.75rem;
 }
 
 .pt-4{

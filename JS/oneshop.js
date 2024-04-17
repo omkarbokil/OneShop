@@ -159,8 +159,8 @@ let cartData = (ind) => {
 
      // Adding Data and styling into created element
      element.innerHTML = `
-     <div class="grid grid-cols-2 items-center border p-3 gap-3 rounded-md max-h-36 dark:border-neutral-600 bg-[#9fb9e6]/10">
-                    <img src=${cartImage} alt="" class="p-3 max-h-32 cart-image justify-self-center">
+     <div class="grid grid-cols-2 items-center border p-3 gap-3 rounded-md min-h-36 max-h-36 dark:border-neutral-600 bg-[#9fb9e6]/10">
+                    <img src=${cartImage} alt="" class="p-3 max-h-32 max-w-32 cart-image justify-self-center">
                     <div>
                          <h1 class="cart-name overflow-hidden text-nowrap text-ellipsis">
                               ${cartName}
