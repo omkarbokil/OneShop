@@ -98,10 +98,10 @@
 
      <!-- Returns Products -->
      <section class="dark:bg-neutral-800 py-10">
-          <section class="grid px-10 sm:p-0 sm:mx-40 place-content-center">
+          <section class="grid place-content-center">
                <section class="grid sm:grid-cols-3 rounded-md gap-5 place-items-center dark:*:text-white">
 
-                    <input type="radio" id="order" name="orders" class="peer/order hidden" >
+                    <input type="radio" id="order" name="orders" class="peer/order hidden" checked>
                     <label for="order" class="font-bold text-md md:text-xl text-[#324464]
                     peer-checked/order:border-b-[3px] border-[#324464] hover:cursor-pointer">
                          Orders
@@ -113,7 +113,7 @@
                          Returns
                     </label>
 
-                    <input type="radio" id="cancel" name="orders" class="peer/cancel hidden" checked>
+                    <input type="radio" id="cancel" name="orders" class="peer/cancel hidden">
                     <label for="cancel" class="font-bold text-md md:text-xl text-[#324464]
                     peer-checked/cancel:border-b-[3px] border-[#ffea4b] hover:cursor-pointer">
                          Cancelled
@@ -138,7 +138,7 @@
                               </div>
                               <div class="grid md:grid-cols-2 p-3">
                                    <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                        <img src="/Material/smartwatch1.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                        <img src="/Material/smartwatch1.png" alt="" class="min-w-32 w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                                    </div>
                                    <div class="space-y-10 relative py-3 flex-col flex justify-center">
                                         <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464] dark:text-white">
@@ -288,7 +288,7 @@
                          </div>
                          <div class="grid grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/headphones.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/headphones.png" alt="" class="min-w-32 w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="flex flex-col gap-5 justify-center dark:*:text-white">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -297,7 +297,7 @@
                                              ₹12,999
                                         </p>
                                    </h1>
-                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white">
+                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white hidden sm:block">
                                         <h1 class="font-bold text-[#324464]">
                                              Delivered On
                                              <p>05-Jan-2024</p>
@@ -338,7 +338,7 @@
                          </div>
                          <div class="grid grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/laptop.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/laptop.png" alt="" class="min-w-32 w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="flex flex-col gap-5 justify-center dark:*:text-white">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -347,7 +347,7 @@
                                              ₹58,990
                                         </p>
                                    </h1>
-                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white">
+                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white hidden sm:block">
                                         <h1 class="font-bold text-[#324464]">
                                              Delivered On
                                              <p>10-Jan-2024</p>
@@ -388,7 +388,7 @@
                          </div>
                          <div class="grid grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/mouse.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/mouse.png" alt="" class="min-w-32 w-52 p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="flex flex-col gap-5 justify-center dark:*:text-white">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -397,7 +397,7 @@
                                              ₹799
                                         </p>
                                    </h1>
-                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white">
+                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white hidden sm:block">
                                         <h1 class="font-bold text-[#324464]">
                                              Delivered On
                                              <p>25-Jan-2024</p>
@@ -438,7 +438,7 @@
                          </div>
                          <div class="grid grid-cols-2 p-3">
                               <div class="rounded-md hover:cursor-pointer justify-self-center">
-                                   <img src="/Material/shoes.png" alt="" class="w-52 p-5 aspect-[1/1] object-contain justify-self-center">
+                                   <img src="/Material/shoes.png" alt="" class="w-52 min-w-32  p-5 aspect-[1/1] object-contain justify-self-center">
                               </div>
                               <div class="flex flex-col gap-5 justify-center dark:*:text-white">
                                    <h1 class="overflow-hidden text-nowrap text-ellipsis text-lg font-bold text-[#324464]">
@@ -447,7 +447,7 @@
                                              ₹2,999
                                         </p>
                                    </h1>
-                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white">
+                                   <div class="text-sm flex flex-col space-y-3 dark:*:text-white hidden sm:block">
                                         <h1 class="font-bold text-[#324464]">
                                              Delivered On
                                              <p>10-Feb-2024</p>

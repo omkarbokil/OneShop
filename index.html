@@ -383,9 +383,26 @@
      </div>
 
      <!-- Cart Modal -->
-     <section class="cart-modal fixed top-0 -right-96 z-50 p-3 bg-white border *:rounded-md *:border-2 dark:bg-neutral-800 dark:border-neutral-600 dark:*:border-neutral-600 dark:*:rounded-md dark:*:text-white *:bg-[#9fb9e6]/10 grid gap-3 cart transition-all h-full overflow-auto max-w-[25rem]">
-
+     <section class="cart fixed h-full top-0 z-50 -right-96 bg-white min-w-[25rem] max-w-[25rem] overflow-auto dark:bg-neutral-800 dark:*:text-white transition-all">
+          <div class="sticky top-[0.1px] flex items-center justify-between px-5 py-3 bg-white dark:bg-neutral-800">
+               <h1 class="text-lg font-semibold">
+                    Your Cart
+               </h1>
+               <span class="material-symbols-outlined cart-close" role="button">
+                    close
+               </span>
+          </div>
+          <section class="cart-modal px-5 grid gap-3">
+               
+          </section>
      </section>
+     <!-- <section class="cart-modal fixed top-0 right-0 z-50 p-3 bg-white border *:border grid gap-3 cart transition-all h-[100vh] overflow-auto max-w-[25rem]">
+          <div class="p-10 dark:border-2 dark:border-black">
+               <button class="">
+                    Confirm Order
+               </button>
+          </div>
+     </section> -->
 
      <!-- Fade -->
      <div class="fixed h-screen w-screen top-0 bg-black/50 z-20 hidden fade">
@@ -506,6 +523,7 @@
           </section>
      </section>
           
+
      <!-- Footer -->
      <footer class="border-t pb-5 hidden sm:block dark:bg-neutral-600 dark:border-neutral-600" id="footer">
           <section class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-10 pt-10 px-5 dark:text-white">

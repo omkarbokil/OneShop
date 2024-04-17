@@ -79,11 +79,28 @@ let addToCartCount = document.querySelector(".add-to-cart-count");
 let count = 0;
 let shoppingCart = document.querySelector("#shopping-cart");
 let cartModal = document.querySelector(".cart-modal");
+let cart = document.querySelector(".cart");
 
 let cartImage = document.querySelector(".cart-image");
 let cartName = document.querySelector(".cart-name");
 let cartDiscPrice = document.querySelector(".cart-disc-price");
 let cartAccPrice = document.querySelector(".cart-acc-price");
+
+let cartClose = () => {
+     cart.style.right = "-50rem";
+     fade.classList.toggle("hidden");
+     cartToggle = 1;
+     let child = cartModal.lastElementChild;
+
+     while(child){
+          cartModal.removeChild(child);
+          child = cartModal.lastElementChild;
+     }
+}
+
+document.querySelector(".cart-close").addEventListener("click", () => {
+     cartClose();
+})
 
 let cnt = (i) => {
      count += i;
@@ -113,16 +130,14 @@ shoppingCart.addEventListener("click", () => {
                     cartData(ind);
                }
           })
-          cartModal.style.right = "0";
+          cart.style.right = "0";
           fade.classList.toggle("hidden");
           cartToggle = 2;
      }
 })
 
      fade.addEventListener("click", () => {
-     cartModal.style.right = "-50rem";
-     fade.classList.toggle("hidden");
-     cartToggle = 1;
+          cartClose();
      })
 
 
@@ -144,31 +159,31 @@ let cartData = (ind) => {
 
      // Adding Data and styling into created element
      element.innerHTML = `
-     <div class="grid grid-cols-2 items-center dark:border-neutral-600 p-3 gap-3 rounded-md">
-          <img src=${cartImage} alt="" class="max-h-32 cart-image justify-self-center">
-          <div>
-               <h1 class="cart-name overflow-hidden text-nowrap text-ellipsis">
-                    ${cartName}
-               </h1>
-               <span class="cart-disc-price text-sm ">
-               ${cartDiscPrice}
-               </span>
-               <span class="text-sm line-through cart-acc-price">
-               ${cartAccPrice}
-               </span>
-               <div class="text-white text-sm *:rounded-full gap-2 buy-now mt-2 flex items-center">
-                    <span class="material-symbols-outlined p-1 bg-slate-500 remove-qty" role="button">
-                         remove
-                    </span>
-                    <span class="p-2 text-black dark:text-white text-lg qty-count">
-                         1
-                    </span>
-                    <span class="material-symbols-outlined p-1 bg-slate-500 add-qty" role="button">
-                         add
-                    </span>
+     <div class="grid grid-cols-2 items-center border p-3 gap-3 rounded-md max-h-36 dark:border-neutral-600 bg-[#9fb9e6]/10">
+                    <img src=${cartImage} alt="" class="p-3 max-h-32 cart-image justify-self-center">
+                    <div>
+                         <h1 class="cart-name overflow-hidden text-nowrap text-ellipsis">
+                              ${cartName}
+                         </h1>
+                         <span class="cart-disc-price text-sm ">
+                         ${cartDiscPrice}
+                         </span>
+                         <span class="text-sm line-through cart-acc-price">
+                         ${cartAccPrice}
+                         </span>
+                         <div class="text-white text-sm *:rounded-full gap-2 buy-now mt-2 flex items-center">
+                              <span class="material-symbols-outlined p-1 bg-[#324464] dark:bg-neutral-800 remove-qty" role="button">
+                                   remove
+                              </span>
+                              <span class="p-2 text-black dark:text-white text-lg qty-count">
+                                   1
+                              </span>
+                              <span class="material-symbols-outlined p-1 bg-[#324464] dark:bg-neutral-800 add-qty" role="button">
+                                   add
+                              </span>
+                         </div>
+                    </div>
                </div>
-          </div>
-     </div>
      `;
           cartModal.insertBefore(element, cartModal.childNodes[0]);
 }
