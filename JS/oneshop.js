@@ -258,18 +258,17 @@ shoppingCart.addEventListener("click", () => {
           val.addEventListener("click", () => {
                dispQty = Number(qtyCount[removeIndex].innerText) - 1;
                qtyCount[removeIndex].innerText = dispQty;
-               console.log(removeIndex);
 
-               let child = cartModal.childNodes[removeIndex];
-               console.log(child);
+               // let child = cartModal.childNodes[removeIndex];
+               // console.log(child);
 
-               if(dispQty == 0){
-                    cartModal.removeChild(child);
-               }
-               dispQty = 0;
+               // if(dispQty == 0){
+               //      cartModal.removeChild(child);
+               // }
+               // dispQty = 0;
 
-               removeQty = document.querySelectorAll(".remove-qty");
-               console.log(removeQty);
+               // removeQty = document.querySelectorAll(".remove-qty");
+               // console.log(removeQty);
           })
      })
 
