@@ -5,7 +5,7 @@ let collapsibleMenu = document.querySelector("#collapsible-menu");
 let navbar = document.querySelector("#navbar");
 let footer = document.querySelector("#footer");
 let body = document.getElementsByTagName("body");
-let fade = document.querySelector(".fade")
+let fade = document.querySelector(".fade");
 
 collapsibleMenuOpen.addEventListener("click", () => {
      collapsibleMenu.style.top = 0;
@@ -31,6 +31,7 @@ itemOne.forEach((val, ind) => {
      })
 })
 
+
 // -------------------------------------------------------------------------------------
 // Products
 let products = document.querySelectorAll(".products");
@@ -39,6 +40,8 @@ let productModalClose = document.querySelector(".product-modal-close");
 let productName = document.querySelectorAll(".product-name");
 let discountedPrice = document.querySelectorAll(".discounted-price");
 let actualPrice = document.querySelectorAll(".actual-price");
+let orderAmount = 0;
+let totalAmount = document.querySelector(".total-amount")
 
 // Product Modal Variables
 let image = document.querySelector(".image");
@@ -90,14 +93,25 @@ let cartClose = () => {
      cart.style.right = "-50rem";
      fade.classList.toggle("hidden");
      cartToggle = 1;
+     orderAmount = 0;
+     totalAmount.innerText = 0;
+     document.querySelector(".clear-cart").classList.add("hidden");
      let child = cartModal.lastElementChild;
 
      while(child){
           cartModal.removeChild(child);
-          console.log(child);
           child = cartModal.lastElementChild;
      }
 }
+
+document.querySelector(".clear-cart").addEventListener("click", () => {
+     addToCart.forEach((val, ind) => {
+          if(localStorage.getItem(ind) !== null){
+               localStorage.removeItem(ind);
+          }
+     })
+     cartClose();
+})
 
 document.querySelector(".cart-close").addEventListener("click", () => {
      cartClose();
@@ -166,9 +180,11 @@ let cartData = (ind) => {
                          <h1 class="cart-name overflow-hidden text-nowrap text-ellipsis">
                               ${cartName}
                          </h1>
+                         <span>₹</span>
                          <span class="cart-disc-price text-sm ">
                          ${cartDiscPrice}
                          </span>
+                         <span> | </span>
                          <span class="text-sm line-through cart-acc-price">
                          ${cartAccPrice}
                          </span>
@@ -187,6 +203,12 @@ let cartData = (ind) => {
                </div>
      `;
           cartModal.insertBefore(element, cartModal.childNodes[0]);
+          let productPrice = Number(pDiscPrice.replaceAll(",",""));
+          orderAmount += productPrice;
+
+          totalAmount.innerText = orderAmount;
+
+          document.querySelector(".clear-cart").classList.remove("hidden");
 }
 
 // -------------------------------------------------------------------------------------
@@ -252,30 +274,25 @@ shoppingCart.addEventListener("click", () => {
      let removeQty = document.querySelectorAll(".remove-qty");
      let addQty = document.querySelectorAll(".add-qty");
      let qtyCount = document.querySelectorAll(".qty-count");
+     let cartPrice = document.querySelectorAll(".cart-disc-price");
      let dispQty = 0;
+     let cartProductPrice = 0;
 
      removeQty.forEach((val, removeIndex) => {
           val.addEventListener("click", () => {
-               dispQty = Number(qtyCount[removeIndex].innerText) - 1;
-               qtyCount[removeIndex].innerText = dispQty;
-
-               let child = cartModal.childNodes[removeIndex];
-               let rChild = removeQty[removeIndex].getElementsByTagName;
-               // console.log(child);
-
-               if(dispQty == 0){
-                    removeQty[removeIndex].remove();
-                    removeQty = document.querySelectorAll(".remove-qty");
-                    cartModal.removeChild(child);
+               console.log(removeIndex);
+               if(Number(qtyCount[removeIndex].innerText) > 1){
+                    dispQty = Number(qtyCount[removeIndex].innerText) - 1;
+                    qtyCount[removeIndex].innerText = dispQty;
+                    cartProductPrice = cartPrice[removeIndex].innerText;
+                    orderAmount -= 1 * Number(cartProductPrice.replaceAll(",",""));
+                    totalAmount.innerText = orderAmount;
                }
-               dispQty = 0;
+               
 
-               // console.log(removeIndex);
-               // console.log(cartModal);
-               // console.log(removeQty);
+               dispQty = 0;
           })
      })
-
 
      // removeQty.forEach((val, removeIndex) => {
      //      val.addEventListener("click", () => {
@@ -291,10 +308,16 @@ shoppingCart.addEventListener("click", () => {
      //           dispQty = 0;
      //      })
      // })
+
      addQty.forEach((val, addIndex) => {
           val.addEventListener("click", () => {
                dispQty = Number(qtyCount[addIndex].innerText) + 1;
                qtyCount[addIndex].innerText = dispQty;
+               
+               cartProductPrice = cartPrice[addIndex].innerText;
+               orderAmount += 1 * Number(cartProductPrice.replaceAll(",",""));
+               totalAmount.innerText = orderAmount;
+               // orderAmount = 0;
                dispQty = 0;
           })
      })

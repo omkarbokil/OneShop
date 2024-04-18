@@ -1390,6 +1390,11 @@ video {
   color: rgb(159 185 230 / var(--tw-text-opacity));
 }
 
+.text-\[\#E52E06\]{
+  --tw-text-opacity: 1;
+  color: rgb(229 46 6 / var(--tw-text-opacity));
+}
+
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
