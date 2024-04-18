@@ -259,19 +259,34 @@ shoppingCart.addEventListener("click", () => {
                dispQty = Number(qtyCount[removeIndex].innerText) - 1;
                qtyCount[removeIndex].innerText = dispQty;
 
-               // let child = cartModal.childNodes[removeIndex];
+               let child = cartModal.childNodes[removeIndex];
+               let rChild = removeQty[removeIndex].getElementsByTagName;
                // console.log(child);
 
-               // if(dispQty == 0){
-               //      cartModal.removeChild(child);
-               // }
-               // dispQty = 0;
-
-               // removeQty = document.querySelectorAll(".remove-qty");
-               // console.log(removeQty);
+               if(dispQty == 0){
+                    cartModal.removeChild(child);
+                    removeQty[removeIndex].remove();
+                    removeQty = document.querySelectorAll(".remove-qty");
+               }
+               dispQty = 0;
           })
      })
 
+
+     // removeQty.forEach((val, removeIndex) => {
+     //      val.addEventListener("click", () => {
+     //           dispQty = Number(qtyCount[removeIndex].innerText) - 1;
+     //           qtyCount[removeIndex].innerText = dispQty;
+
+     //           let child = cartModal.childNodes[removeIndex];
+     //           // console.log(child);
+
+     //           if(dispQty == 0){
+     //                cartModal.removeChild(child);
+     //           }
+     //           dispQty = 0;
+     //      })
+     // })
      addQty.forEach((val, addIndex) => {
           val.addEventListener("click", () => {
                dispQty = Number(qtyCount[addIndex].innerText) + 1;
