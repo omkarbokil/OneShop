@@ -264,11 +264,15 @@ shoppingCart.addEventListener("click", () => {
                // console.log(child);
 
                if(dispQty == 0){
-                    cartModal.removeChild(child);
                     removeQty[removeIndex].remove();
                     removeQty = document.querySelectorAll(".remove-qty");
+                    cartModal.removeChild(child);
                }
                dispQty = 0;
+
+               // console.log(removeIndex);
+               // console.log(cartModal);
+               // console.log(removeQty);
           })
      })
 
