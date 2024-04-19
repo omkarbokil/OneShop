@@ -97,11 +97,12 @@ let cartClose = () => {
      totalAmount.innerText = 0;
      document.querySelector(".clear-cart").classList.add("hidden");
      let child = cartModal.lastElementChild;
-
+     
      while(child){
           cartModal.removeChild(child);
           child = cartModal.lastElementChild;
      }
+     location.href = "/index.html";
 }
 
 document.querySelector(".clear-cart").addEventListener("click", () => {
